@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_endurance_first_time_start",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_endurance_first_time_start",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

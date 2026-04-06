@@ -1,0 +1,4 @@
+/// @description Debug
+
+debug = !debug;
+

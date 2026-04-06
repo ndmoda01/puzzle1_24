@@ -1,0 +1,13 @@
+{
+  "$GMScript":"v1",
+  "%Name":"scr_increase_player_items_queued",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"scr_increase_player_items_queued",
+  "parent":{
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}

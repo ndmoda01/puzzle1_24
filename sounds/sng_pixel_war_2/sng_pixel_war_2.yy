@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sng_pixel_war_2",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":53.33304,
+  "exportDir":"",
+  "name":"sng_pixel_war_2",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sng_pixel_war_2.wav",
+  "volume":0.05,
+}

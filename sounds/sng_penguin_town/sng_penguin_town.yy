@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"sng_penguin_town",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":35.3007,
+  "exportDir":"",
+  "name":"sng_penguin_town",
+  "parent":{
+    "name":"Music",
+    "path":"folders/Sounds/Music.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"sng_penguin_town.wav",
+  "volume":0.05,
+}

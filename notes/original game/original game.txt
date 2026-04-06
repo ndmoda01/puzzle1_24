@@ -1,0 +1,87 @@
+
+level 1 - 5x10
+level 2 - 8x10
+
+
+Difficulty adjustment
+- number of characters that are on the level before starting
+- how long and how fast new characters are added
+- how many and size of walls are inside the maps
+- number of types of items to collect 
+- minimum number of items to collect
+- amount of time to collect items
+- overall size of the map
+
+
+adding creatures to the map
+cases
+1 - shot, and added (no conflict)
+2 - shot, landing space no longer free
+3 - shot, level ends
+
+
+delete file in app data to reset scores
+
+levels:
+change game mechanic or introduce something new every 3 levels
+- introduce mechanic 1st level
+- explore it 2nd level
+- difficult use of mechanic 3rd level
+
+
+modes
+Krazy Kreatures mode (Classic)
+- Specific number of unique board shapes (levels), currently 10
+- Each level gets more difficult
+- Blocks do not spawn in, but may be present at the start of the level
+- New items spawn in continuously until the timer nearly runs out
+- Last 10 seconds, no new items spawn in. Bonus given for cleared sections of the board
+
+Single player 
+	Single Player: 1 player goes through all levels to try to get to the end with the highest score
+		Win: complete all levels and end with highest score possible
+		Lose: if board fills up completely
+	
+Multi-player - 
+	Coop (shared board): multiple players go through all levels to try to get to the end with the highest score
+		Win: complete all levels with highest score possible (player scores combine)
+		Lose: if board fills up completely, both players lose
+		
+	Comp (split board): multiple players go through all levels to try to get to the end with the highest score
+		Win: complete all levels with highest score possible (or higher than your opponent) 
+		Lose: if a player's board fills up completely, they are knocked out of the round. If both fill up in the same round, game over
+
+
+Tetris mode (Endurance)
+Single player 
+	Single Player: 1 player progresses as far as possible on the same board. Each level gradually gets more difficult
+		Win: complete as many stages as possible with highest score possible (no discrete end?)
+		Lose: if board fills up completely
+	
+Multi-player - 
+	Coop (shared board): multiple players progress as far as possible on 1 board. Each level gradually gets more difficult
+		Win: complete as many stages as possible with highest score possible (no discrete end?)
+		Lose: if board fills up completely, both players lose
+		
+	Comp (split board): multiple players progress as far as possible on separate boards. Each level gradually gets more difficult
+		Win: complete as many stages as possible with a higher score than all other players (no discrete end?)
+		Lose: if a player's board fills up completely, they are knocked out (lose a life). Once a player loses all thier lives and is knocked out, they are out
+		
+		
+Dr. Mario mode (Trash remover)
+- Each level starts with a specific number of colored blocks. Once all of the colored blocks are removed, the level is completed
+- Number of colored blocks gradually increases each level
+
+Single player 
+	Single Player: 1 player progresses as far as possible on 1 board. Each level gradually gets more difficult
+		Win: complete as many stages as possible with highest score possible (no discrete end?)
+		Lose: if board fills up completely
+	
+Multi-player - 
+	Coop (shared board): multiple players progress as far as possible on 1 board. Each level gradually gets more difficult
+		Win: complete as many stages as possible with highest score possible (no discrete end?)
+		Lose: if board fills up completely, both players lose
+		
+	Comp (split board): multiple players progress as far as possible on separate boards. Each level gradually gets more difficult
+		Win: complete as many stages as possible with a higher score than all other players (no discrete end?)
+		Lose: if a player's board fills up completely, they are knocked out (lose a life). Once a player loses all thier lives and is knocked out, they are out
