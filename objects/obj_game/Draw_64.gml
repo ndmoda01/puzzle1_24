@@ -339,7 +339,7 @@ else if (room == rm_ending){
 	//otherwise draw individual scores for comp mode
 	else{
 			
-		if (game_type == BLOCKOUT) {
+		if (game_type == BLOCKOUT) or (game_type == COLOR_CLASH){
 			
 			//if (player1_lives <= 0) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 2 Wins!").draw(_mid_x,_win_y);
 			//if (player2_lives <= 0) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 1 Wins!").draw(_mid_x,_win_y);
@@ -1859,6 +1859,87 @@ else{
 	}
 	//check if all players are knocked out to trigger game over
 	#endregion
+	
+	//End of level COLOR CLASH (timer over)
+	if (_remaining_time < 0) and (game_over == false) and (game_type == COLOR_CLASH) and (!instance_exists(obj_room_transition_fade)){
+		
+		//draw the winner
+		//text background
+		draw_sprite_stretched(spr_timer_background,2,650,8,612,80);
+					
+		if (player1_color_qty > player2_color_qty){ 
+			scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]P1 Wins Round!").draw(_timer_x,_timer_y);
+		}
+		if (player1_color_qty < player2_color_qty){ 
+			scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]P2 Wins Round!").draw(_timer_x,_timer_y);
+		}
+		if (player1_color_qty == player2_color_qty){ 
+			scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]Tie Round!").draw(_timer_x,_timer_y);
+		}
+		
+		//use this variable to calculate any end of level changes to happen only once
+		if (calculated_level_score == false) and (game_over == false) and (!instance_exists(obj_room_transition)){
+			
+			//pause all players
+			with(obj_player_parent) has_control = false;
+		
+			//check to see who won the round
+			//P1 wins
+			if (player1_color_qty > player2_color_qty){
+			
+				rounds_won_p1++;
+			}
+			//P2 Wins
+			if (player1_color_qty < player2_color_qty){
+			
+				rounds_won_p2++;
+			}
+			//Tie Round
+			if (player1_color_qty == player2_color_qty){
+			
+			
+			}
+			
+			//increase round counter
+			level++;
+			
+			//timer to restart the level
+			alarm[0] = SEC*5;
+			
+			calculated_level_score = true;
+		}
+		
+		//restart after timer runs out if the game isn't over yet
+		//if the match is over, go to the ending screen
+		if (calculated_level_score == true) and (alarm[0] <= 0) and (game_over == false){
+			
+			if (rounds_won_p1 < round_wins_needed_to_win_match) and (rounds_won_p2 < round_wins_needed_to_win_match){
+				//room_restart();
+				switch(level){
+					case 2: scr_room_goto_transition_fade(rm_2P_level_CC_2); break;
+					case 3: scr_room_goto_transition_fade(rm_2P_level_CC_3); break;
+						
+				}
+				//calculated_level_score = false;
+			}
+			
+			if (rounds_won_p1 >= round_wins_needed_to_win_match or rounds_won_p2 >= round_wins_needed_to_win_match){
+				//alarm[0] = SEC*5;
+				scr_room_goto_transition(rm_ending);  
+			}
+			
+		}
+		
+		
+		//End the match if a player has won the number of matches needed
+		//if (alarm[0] <= 0) and (game_over == false) and (rounds_won_p1 >= round_wins_needed_to_win_match or rounds_won_p2 >= round_wins_needed_to_win_match){
+		//	//alarm[0] = SEC*5;
+		//	scr_room_goto_transition(rm_ending);  
+		//}
+	
+	}
+	
+	
 	
 	if (sbvs == true){
 		//game over all modes if both players are knocked out

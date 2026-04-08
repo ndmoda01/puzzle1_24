@@ -272,11 +272,11 @@ function scr_collection_qty_check(argument0,argument1,argument2, argument3){
 			switch(player_number){
 				case 1: 
 					_inst_score_card.my_score = _inst_points*_player_multiplier; 
-					var _inst_color_card = instance_create_layer(_scored_inst.x,_scored_inst.y,"Player_backgrounds",obj_player1_background);
+					if (obj_game.game_type == COLOR_CLASH) var _inst_color_card = instance_create_layer(_scored_inst.x,_scored_inst.y,"Player_backgrounds",obj_player1_background);
 				break;
 				case 2: 
 					_inst_score_card.my_score = _inst_points*_player_multiplier; 
-					var _inst_color_card = instance_create_layer(_scored_inst.x,_scored_inst.y,"Player_backgrounds",obj_player2_background);
+					if (obj_game.game_type == COLOR_CLASH) var _inst_color_card = instance_create_layer(_scored_inst.x,_scored_inst.y,"Player_backgrounds",obj_player2_background);
 				break;
 				case 3: _inst_score_card.my_score = _inst_points*_player_multiplier; break;
 				case 4: _inst_score_card.my_score = _inst_points*_player_multiplier; break;

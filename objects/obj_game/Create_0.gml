@@ -21,7 +21,7 @@ player_starting_lives = 3;
 player1_lives = player_starting_lives;
 player2_lives = player_starting_lives;
 
-level = 0;
+level = 1;
 level_timer = 300*SEC;
 calculated_level_score = false;
 level_free_space_bonus_score = 0;
@@ -56,7 +56,7 @@ total_lines_p2 = 0;
 
 
 //blockout mode variables
-rounds_won_p1 = 3;
+rounds_won_p1 = 0;
 rounds_won_p2 = 0;
 round_wins_needed_to_win_match = 2;
 item_spawn_rate_max_blockout = 10; //maximum speed in blockout
