@@ -16,8 +16,8 @@ draw_set_valign(fa_middle);
 draw_set_font(fnt_game_gui_largest_3);
 //var c = obj_game.color[4];
 //draw_text_color((_w/2),(_h/2)-100,"Level "+string(my_level),c,c,c,c,1);
-if (obj_game.game_type != BLOCKOUT) draw_text(_w/2,(_h/2)-100,"Level "+string(my_level));
-if (obj_game.game_type == BLOCKOUT) draw_text(_w/2,(_h/2)-100,"Round "+string(my_level));
+if (obj_game.game_type != BLOCKOUT) and (obj_game.game_type != COLOR_CLASH) draw_text(_w/2,(_h/2)-100,"Level "+string(my_level));
+if (obj_game.game_type == BLOCKOUT) or (obj_game.game_type == COLOR_CLASH) draw_text(_w/2,(_h/2)-100,"Round "+string(my_level));
 
 draw_set_font(fnt_game_gui_largest_2);
 draw_text(_w/2,_h/2,my_text[text_index]);

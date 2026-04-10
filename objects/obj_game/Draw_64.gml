@@ -1378,7 +1378,13 @@ else{
 		else if (game_type == COLOR_CLASH){
 			//score needs to be right justfied 
 			player1_color_qty = instance_number(obj_player1_background);
-			scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(player1_color_qty)).draw(390,52);	
+			scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(player1_color_qty)).draw(390,52);
+			//draw wins
+			var _wins_buffer = 76;
+			for (i=0; i < rounds_won_p1;i++){
+				//draw_sprite_ext(spr_heart,0,120+(i*_lives_buffer),24,2,2,0,c_white,1);
+				draw_sprite_ext(spr_star_icon,0,124+(i*_wins_buffer),24,2,2,0,c_white,1);
+			}
 			
 		}
 		else {
@@ -1433,7 +1439,13 @@ else{
 				//score needs to be right justfied
 				player2_color_qty = instance_number(obj_player2_background);
 				scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(player2_color_qty)).draw(1902,52);	
-			
+				
+				var _wins_buffer = 76;
+				//stars
+				for (i=0; i < rounds_won_p2;i++){
+					//draw_sprite_ext(spr_heart,0,120+(i*_lives_buffer),24,2,2,0,c_white,1);
+					draw_sprite_ext(spr_star_icon,0,1632+(i*_wins_buffer),24,2,2,0,c_white,1);
+				}
 			}
 			//other modes - score
 			else{ 

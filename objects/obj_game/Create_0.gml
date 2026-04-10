@@ -70,8 +70,8 @@ level_end_timer = level_end_timer_max;
 
 
 //color clash variables
-player1_color_qty = 16;
-player2_color_qty = 64;
+player1_color_qty = 0;
+player2_color_qty = 0;
 player3_color_qty = 0;
 player4_color_qty = 0;
 

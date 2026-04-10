@@ -520,6 +520,40 @@ if (room == rm_2P_level_CC_1){
 	//y_room_offset = 41;	
 	
 }
+
+if (room == rm_2P_level_CC_2){
+	//camera_set_view_size(cam,320,180);
+	//x_room_offset = 160;
+	//y_room_offset = 86;	
+	
+	//zoom x5
+	camera_set_view_size(cam,384,216);
+	x_room_offset = 136;
+	y_room_offset = 44;	
+	
+	//zoom x4
+	//camera_set_view_size(cam,480,270);
+	//x_room_offset = 80;
+	//y_room_offset = 41;	
+	
+}
+
+if (room == rm_2P_level_CC_3){
+	//camera_set_view_size(cam,320,180);
+	//x_room_offset = 160;
+	//y_room_offset = 86;	
+	
+	//zoom x5
+	camera_set_view_size(cam,384,216);
+	x_room_offset = 136;
+	y_room_offset = 44;	
+	
+	//zoom x4
+	//camera_set_view_size(cam,480,270);
+	//x_room_offset = 80;
+	//y_room_offset = 41;	
+	
+}
 #endregion
 
 #region 3P rooms
