@@ -573,6 +573,7 @@
     {"id":{"name":"spr_lime2_p1_2","path":"sprites/spr_lime2_p1_2/spr_lime2_p1_2.yy",},},
     {"id":{"name":"spr_lime2_p1_3","path":"sprites/spr_lime2_p1_3/spr_lime2_p1_3.yy",},},
     {"id":{"name":"spr_lime2_p1_4","path":"sprites/spr_lime2_p1_4/spr_lime2_p1_4.yy",},},
+    {"id":{"name":"spr_lime2_p1_5","path":"sprites/spr_lime2_p1_5/spr_lime2_p1_5.yy",},},
     {"id":{"name":"spr_lime2_p1_imposter","path":"sprites/spr_lime2_p1_imposter/spr_lime2_p1_imposter.yy",},},
     {"id":{"name":"spr_lime2_p1","path":"sprites/spr_lime2_p1/spr_lime2_p1.yy",},},
     {"id":{"name":"spr_lime2","path":"sprites/spr_lime2/spr_lime2.yy",},},
@@ -688,6 +689,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_initial_room","path":"rooms/rm_initial_room/rm_initial_room.yy",},},
+    {"roomId":{"name":"rm_test_room_640","path":"rooms/rm_test_room_640/rm_test_room_640.yy",},},
     {"roomId":{"name":"rm_2P_level_CC_1","path":"rooms/rm_2P_level_CC_1/rm_2P_level_CC_1.yy",},},
     {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"rm_game_type_menu","path":"rooms/rm_game_type_menu/rm_game_type_menu.yy",},},
@@ -752,7 +754,6 @@
     {"roomId":{"name":"rm_4P_level4a","path":"rooms/rm_4P_level4a/rm_4P_level4a.yy",},},
     {"roomId":{"name":"rm_4P_level6a","path":"rooms/rm_4P_level6a/rm_4P_level6a.yy",},},
     {"roomId":{"name":"rm_4P_level8a","path":"rooms/rm_4P_level8a/rm_4P_level8a.yy",},},
-    {"roomId":{"name":"rm_test_room_640","path":"rooms/rm_test_room_640/rm_test_room_640.yy",},},
     {"roomId":{"name":"rm_4P_endurance","path":"rooms/rm_4P_endurance/rm_4P_endurance.yy",},},
     {"roomId":{"name":"rm_3P_endurance","path":"rooms/rm_3P_endurance/rm_3P_endurance.yy",},},
     {"roomId":{"name":"rm_2P_level_EN","path":"rooms/rm_2P_level_EN/rm_2P_level_EN.yy",},},

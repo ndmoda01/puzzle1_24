@@ -63,6 +63,21 @@ function MACROS(){
 	//special powers
 	#macro FROZEN 0
 	
+	//collection details
+	#macro TOTAL_QTY 0
+	#macro DBASU_QTY 1
+	#macro DBASD_QTY 2
+	#macro DFRSU_QTY 3
+	#macro DFRSD_QTY 4
+	#macro VRTDO_QTY 5
+	#macro VRTUP_QTY 6
+	#macro HRZLE_QTY 7
+	#macro HRZRI_QTY 8
+	#macro DBAST_QTY 9
+	#macro DFRST_QTY 10
+	#macro VERTT_QTY 11
+	#macro HORZT_QTY 12 
+	
 	
 	
 	

@@ -253,12 +253,21 @@ function scr_collection_qty_check(argument0,argument1,argument2, argument3){
 		
 		//find out how many instances in each scoring direction
 		switch(_dir_enum){
-			case HORIZONTAL: break;	
-			case VERTICAL: break;
-			case DIAGONAL_BS: break;
-			case DIAGONAL_FS: break;
+			case HORIZONTAL: 
+				//horizontal_collection_qty = array_length(horizontal_collection_id);
+			break;	
+			case VERTICAL: 
+				//vertical_collection_qty = array_length(vertical_collection_id);
+			break;
+			case DIAGONAL_BS: 
+				//diagonal_bs_collection_qty = array_length(diagonal_bs_collection_id);
+			break;
+			case DIAGONAL_FS: 
+				//diagonal_fs_collection_qty = array_length(diagonal_fs_collection_id);
+			break;
 		}
-		
+		//have to subtract out the scored piece that is built into each line's calcualtion individually, then add 1 back to the total
+		total_collection_qty = ((horizontal_collection_qty-1)+(vertical_collection_qty-1)+(diagonal_bs_collection_qty-1)+(diagonal_fs_collection_qty-1)+1);
 		
 		//destroy the instances in the array
 		for (var i=1; i<_dir_counter; i++){

@@ -49,6 +49,29 @@ diagonal_fs_collection_qty = 1;
 diagonal_bs_collection_id = [];
 diagonal_bs_collection_qty = 1;
 
+total_collection_qty = 0;
+
+//this array will hold various details about the collections that might want to be referenced later
+collection_details_array = [];
+collection_details_index = 0;
+for (var i = 0; i <100; i++){
+	collection_details_index = i;
+	collection_details_array[collection_details_index][TOTAL_QTY] = 0;
+	collection_details_array[collection_details_index][DBASD_QTY] = 0;
+	collection_details_array[collection_details_index][DBASU_QTY] = 0;
+	collection_details_array[collection_details_index][DFRSD_QTY] = 0;
+	collection_details_array[collection_details_index][DFRSU_QTY] = 0;
+	collection_details_array[collection_details_index][VRTDO_QTY] = 0;
+	collection_details_array[collection_details_index][VRTUP_QTY] = 0;
+	collection_details_array[collection_details_index][HRZLE_QTY] = 0;
+	collection_details_array[collection_details_index][HRZRI_QTY] = 0;
+	collection_details_array[collection_details_index][DBAST_QTY] = 0;
+	collection_details_array[collection_details_index][DFRST_QTY] = 0;
+	collection_details_array[collection_details_index][VERTT_QTY] = 0;
+	collection_details_array[collection_details_index][HORZT_QTY] = 0;
+}
+collection_details_index = 1;
+
 player_number = 1;
 
 currently_frozen = false;

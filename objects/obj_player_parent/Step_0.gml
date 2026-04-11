@@ -508,6 +508,26 @@ if ((key_select) and holding == true){
 				
 			//update score card's score to be correct
 			_inst_score_card.my_score = _multi_bonus;
+			
+			//calculate the collection's details
+			collection_details_array[collection_details_index][TOTAL_QTY] = ((hl+hr)+(vu+vd)+(dbsd+dbsu)+(dfsd+dfsu)+1);
+			collection_details_array[collection_details_index][DBASD_QTY] = dbsd;
+			collection_details_array[collection_details_index][DBASU_QTY] = dbsu;
+			collection_details_array[collection_details_index][DFRSD_QTY] = dfsu;
+			collection_details_array[collection_details_index][DFRSU_QTY] = dfsd;
+			collection_details_array[collection_details_index][VRTDO_QTY] = vd;
+			collection_details_array[collection_details_index][VRTUP_QTY] = vu;
+			collection_details_array[collection_details_index][HRZLE_QTY] = hl;
+			collection_details_array[collection_details_index][HRZRI_QTY] = hr;
+			collection_details_array[collection_details_index][DBAST_QTY] = dbsd+dbsu+1;
+			collection_details_array[collection_details_index][DFRST_QTY] = dfsu+dfsd+1;
+			collection_details_array[collection_details_index][VERTT_QTY] = vd+vu+1;
+			collection_details_array[collection_details_index][HORZT_QTY] = hl+hr+1;
+			
+			
+	
+			//increase the index so next collection will be saved in another entry
+			collection_details_index++;
 				
 			//update the held instance's collection qty variable		
 			//instance_holding_id.my_collection_qty = max(horizontal_collection_qty,vertical_collection_qty,diagonal_fs_collection_qty, diagonal_bs_collection_qty);
@@ -518,6 +538,10 @@ if ((key_select) and holding == true){
 			instance_holding_id = noone;
 			
 		}
+		
+		
+		
+		
 			
 		//reset variables
 		horizontal_collection_qty = 1;
