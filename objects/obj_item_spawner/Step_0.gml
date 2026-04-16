@@ -190,7 +190,7 @@ if (obj_game.game_type == COLOR_CLASH){
 		//if it's not over, see if it's time to spawn a new item
 		if (obj_game.item_spawn_rate <= 0 and obj_game.level_timer > 0){
 			
-			//var _free_space_check = instance_create_layer(x, y,"Instances_1", obj_space_check_cursor_item_spawn);
+			var _free_space_check = instance_create_layer(x, y,"Instances_1", obj_space_check_cursor_item_spawn);
 			
 			//update rate normally if not in split board mode
 			if (obj_game.sbvs == false){

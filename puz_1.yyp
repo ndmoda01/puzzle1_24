@@ -689,8 +689,8 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_initial_room","path":"rooms/rm_initial_room/rm_initial_room.yy",},},
-    {"roomId":{"name":"rm_test_room_640","path":"rooms/rm_test_room_640/rm_test_room_640.yy",},},
     {"roomId":{"name":"rm_2P_level_CC_1","path":"rooms/rm_2P_level_CC_1/rm_2P_level_CC_1.yy",},},
+    {"roomId":{"name":"rm_test_room_640","path":"rooms/rm_test_room_640/rm_test_room_640.yy",},},
     {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"rm_game_type_menu","path":"rooms/rm_game_type_menu/rm_game_type_menu.yy",},},
     {"roomId":{"name":"rm_level2","path":"rooms/rm_level2/rm_level2.yy",},},

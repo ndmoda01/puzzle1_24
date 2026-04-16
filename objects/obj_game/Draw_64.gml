@@ -344,8 +344,13 @@ else if (room == rm_ending){
 			//if (player1_lives <= 0) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 2 Wins!").draw(_mid_x,_win_y);
 			//if (player2_lives <= 0) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 1 Wins!").draw(_mid_x,_win_y);
 			
-			if (rounds_won_p1 >= round_wins_needed_to_win_match) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 1 Wins!").draw(_mid_x,_win_y);
-			if (rounds_won_p2 >= round_wins_needed_to_win_match) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 2 Wins!").draw(_mid_x,_win_y);
+			//if (rounds_won_p1 >= round_wins_needed_to_win_match) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 1 Wins!").draw(_mid_x,_win_y);
+			//if (rounds_won_p2 >= round_wins_needed_to_win_match) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 2 Wins!").draw(_mid_x,_win_y);
+			
+			//change these game types to determine winner based on most wins (in case the 'round wins needed to win match' is never reached
+			if (rounds_won_p1 > rounds_won_p2) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 1 Wins!").draw(_mid_x,_win_y);
+			if (rounds_won_p1 < rounds_won_p2) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Player 2 Wins!").draw(_mid_x,_win_y);
+			if (rounds_won_p1 == rounds_won_p2) scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Tie Game!").draw(_mid_x,_win_y);
 			
 		}
 		
@@ -1872,7 +1877,7 @@ else{
 	//check if all players are knocked out to trigger game over
 	#endregion
 	
-	//End of level COLOR CLASH (timer over)
+	#region End of level COLOR CLASH (timer over)
 	if (_remaining_time < 0) and (game_over == false) and (game_type == COLOR_CLASH) and (!instance_exists(obj_room_transition_fade)){
 		
 		//draw the winner
@@ -1935,7 +1940,9 @@ else{
 				//calculated_level_score = false;
 			}
 			
-			if (rounds_won_p1 >= round_wins_needed_to_win_match or rounds_won_p2 >= round_wins_needed_to_win_match){
+			//go to the ending if a player won the required number of matches or the current level was the final one
+			var _final_room = rm_2P_level_CC_3;
+			if (rounds_won_p1 >= round_wins_needed_to_win_match or rounds_won_p2 >= round_wins_needed_to_win_match) or (room == _final_room){
 				//alarm[0] = SEC*5;
 				scr_room_goto_transition(rm_ending);  
 			}
@@ -1950,7 +1957,7 @@ else{
 		//}
 	
 	}
-	
+	#endregion
 	
 	
 	if (sbvs == true){

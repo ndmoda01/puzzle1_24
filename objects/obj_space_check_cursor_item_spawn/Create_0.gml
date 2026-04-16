@@ -39,6 +39,9 @@ while(!place_meeting(x,y,obj_space_check_stop)){
 //check for game over if no free spaces found
 if (_free_space_index == 0){
 	
+	//Color clash, end of round if board fills up
+	if (obj_game.game_type == COLOR_CLASH) obj_game.level_timer = -1;
+	
 	//split board competitive
 	//knockout instead of ending the game
 	if (obj_game.sbvs == true) and (obj_game.multiplayer_mode == MULTI_COMP){

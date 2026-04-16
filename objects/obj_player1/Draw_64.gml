@@ -1,6 +1,6 @@
 /// @description Insert description here
 
-
+/*
 var c = c_black;
 _x1 = 6;
 _y1 = 6;
