@@ -1897,8 +1897,11 @@ else{
 		//use this variable to calculate any end of level changes to happen only once
 		if (calculated_level_score == false) and (game_over == false) and (!instance_exists(obj_room_transition)){
 			
-			//pause all players
-			with(obj_player_parent) has_control = false;
+			//pause all players and make invisible
+			with(obj_player_parent){ 
+				has_control = false;
+				visible = false;
+			}
 		
 			//check to see who won the round
 			//P1 wins
