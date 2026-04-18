@@ -13,6 +13,10 @@ activate_button = function(){
 		obj_game.game_type = -1;
 		inst_BLOCKOUT.selected = false;
 	}
+	if (inst_COLOR_CLASH.selected == true){
+		obj_game.game_type = -1;
+		inst_COLOR_CLASH.selected = false;
+	}
 	
 	//inst_START.selectable = true;
 	
@@ -29,6 +33,7 @@ activate_button = function(){
 	inst_MARATHON.selectable = true;
 	inst_CLEANUP.selectable = true;
 	inst_BLOCKOUT.selectable = false;
+	inst_COLOR_CLASH.selectable = false;
 	
 	//obj_menu_cursor.position_index = 6;
 	//obj_menu_cursor.position_index = 4;

@@ -23,6 +23,7 @@ activate_button = function(){
 	inst_MARATHON.selectable = true;
 	inst_CLEANUP.selectable = true;
 	inst_BLOCKOUT.selectable = true;
+	inst_COLOR_CLASH.selectable = true;
 	
 	//obj_menu_cursor.position_index = 6;
 	//obj_menu_cursor.position_index = 4;
@@ -37,9 +38,9 @@ activate_button = function(){
 		position[5] = [260,87];
 		position[6] = [260,111];
 		position[7] = [260,135];
-		//position[8] = [260,159];
-		position[8] = [470,199];
-		position[9] = -1;
+		position[8] = [260,159];
+		position[9] = [470,199];
+		position[10] = -1;
 		
 		position_index = 4;
 	}

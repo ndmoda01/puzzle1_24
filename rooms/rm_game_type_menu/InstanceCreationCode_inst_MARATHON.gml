@@ -11,6 +11,7 @@ activate_button = function(){
 	//inst_ENDURANCE.selected = false;
 	inst_BLOCKOUT.selected = false;
 	inst_CLEANUP.selected = false;
+	inst_COLOR_CLASH.selected = false;
 	
 	//confirm scoring mode has been chosen if more than one player selected
 	if (obj_game.number_of_players > 1){
@@ -55,11 +56,12 @@ activate_button = function(){
 				position[5] = [260,87];
 				position[6] = [260,111];
 				position[7] = [260,135];
+				position[8] = [260,159];
 				
-				position[8] = [470,159];	
-				position[9] = [470,199];	
+				position[9] = [470,159];	
+				position[10] = [470,199];	
 			
-				position_index = 8;
+				position_index = 9;
 			}
 			//if it's not full, then overwrite 8 and add position 9
 			if (position[8] == -1){

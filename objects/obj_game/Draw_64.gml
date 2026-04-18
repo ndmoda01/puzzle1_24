@@ -94,6 +94,8 @@ else if (room == rm_game_type_menu){
 		break;
 		case BLOCKOUT: draw_text(_x3,_y3, "Blockout");
 		break;
+		case COLOR_CLASH: draw_text(_x3,_y3, "Color Clash");
+		break;
 	}
 	
 	//cancel out of the room, back to the menu

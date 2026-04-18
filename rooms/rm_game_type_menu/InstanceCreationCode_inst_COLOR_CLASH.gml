@@ -1,17 +1,18 @@
-my_text = "Blockout";
-my_text_2 = "This is a two player battle mode.\nCollect large item lines to send rocks to opponent's play board.\nIf your board fills up, you are knocked out and lose a life.\nLose all your lives and you lose the game.";
+my_text = "Color Clash";
+my_text_2 = "This is a two player battle mode.\nMake collections to gain control of new board area or steal board area from your opponent.\nIf the board fills up with fruit, the current round ends.\nControl the most area at the end of the round to win.";
 selectable = false;
 //button_xscale = 1.6;
 
 activate_button = function(){
-	obj_game.game_type = BLOCKOUT;
+	obj_game.game_type = COLOR_CLASH;
 	selected = true;
 
 	inst_CLASSIC.selected = false;
 	//inst_ENDURANCE.selected = false;
 	inst_MARATHON.selected = false;
 	inst_CLEANUP.selected = false;
-	inst_COLOR_CLASH.selected = false;
+	inst_BLOCKOUT.selected = false;
+	
 	//confirm scoring mode has been chosen if more than one player selected
 	if (obj_game.number_of_players > 1){
 		if (inst_COOP.selected == true) or (inst_COMP.selected == true){

@@ -111,7 +111,7 @@ item_spawn_rate_sbvs_2 = item_spawn_rate_max;
 item_spawn_rate_reduced_rate_max = 20; //faster rate that items spawn in sbvs (max speed for any player)
 
 //game defaults 
-number_of_players = 2;
+number_of_players = 0;
 //number_of_players = 3;
 
 //multiplayer mode: 0 = single player, 1 = multiplayer coop, 2 = multiplayer competitive

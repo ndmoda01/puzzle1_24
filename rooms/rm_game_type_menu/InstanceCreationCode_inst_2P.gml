@@ -22,11 +22,13 @@ activate_button = function(){
 	inst_MARATHON.selectable = false;
 	inst_BLOCKOUT.selectable = false;
 	inst_CLEANUP.selectable = false;
+	inst_COLOR_CLASH.selectable = false;
 	
 	inst_CLASSIC.selected = false;
 	inst_MARATHON.selected = false;
 	inst_BLOCKOUT.selected = false;
 	inst_CLEANUP.selected = false;
+	inst_COLOR_CLASH.selected = false;
 	
 	obj_game.multiplayer_mode = 0;
 	

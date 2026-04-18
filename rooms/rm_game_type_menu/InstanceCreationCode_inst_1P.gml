@@ -22,11 +22,13 @@ activate_button = function(){
 	inst_CLASSIC.selectable = false;
 	inst_MARATHON.selectable = false;
 	inst_BLOCKOUT.selectable = false;
+	inst_COLOR_CLASH.selectable = false;
 	inst_CLEANUP.selectable = false;
 	
 	inst_CLASSIC.selected = false;
 	inst_MARATHON.selected = false;
 	inst_BLOCKOUT.selected = false;
+	inst_COLOR_CLASH.selected = false;
 	inst_CLEANUP.selected = false;
 	
 	obj_game.multiplayer_mode = 0;
@@ -36,6 +38,11 @@ activate_button = function(){
 		inst_START.selectable = false;
 		inst_BLOCKOUT.selected = false;
 	}
+	if (inst_COLOR_CLASH.selected == true){
+		obj_game.game_type = -1;
+		inst_START.selectable = false;
+		inst_COLOR_CLASH.selected = false;
+	}
 	
 	//inst_START.selectable = true;
 	inst_CLASSIC.selectable = true;
@@ -43,6 +50,7 @@ activate_button = function(){
 	inst_MARATHON.selectable = true;
 	inst_CLEANUP.selectable = true;
 	inst_BLOCKOUT.selectable = false;
+	inst_COLOR_CLASH.selectable = false;
 	
 	//next position to go to when clicked
 	//game types (classic, endurance, etc)
