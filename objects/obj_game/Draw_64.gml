@@ -582,6 +582,25 @@ else if (room == rm_1P_level_00) or (room == rm_2P_level_00) or (room == rm_3P_l
 				//break;
 			}
 		}
+		
+		//Color Clash
+		if (game_type == COLOR_CLASH){
+			level++;
+			switch(number_of_players){
+				case 1: 
+					
+				break;
+				case 2: 
+					room_goto(rm_2P_level_CC_1);
+					//if (sbvs == true) and (multiplayer_mode == MULTI_COMP) room_goto(rm_2P_level_BO_VS);
+					//if (sbvs == true) and (multiplayer_mode == MULTI_COMP) scr_room_goto_transition_fade(rm_2P_level_BO_VS);
+				break;
+				//case 3: room_goto(rm_3P_level1a);
+				//break;
+				//case 4: room_goto(rm_4P_level1b);
+				//break;
+			}
+		}
 	
 		if (game_type == CLEANUP){
 		//if (game_type == CLASSIC){

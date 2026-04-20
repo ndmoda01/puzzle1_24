@@ -1,3 +1,4 @@
+/*
 if(instance_exists(obj_level_intro)) audio_pause_sound(level_music); 
 
 if (obj_game.level_timer <= 0) and (obj_game.game_type == CLASSIC) and (obj_game.game_over == false){

@@ -1,4 +1,4 @@
-
+/*
 var _level = obj_game.level;
 if (_level > 10) and ((obj_game.game_type == ENDURANCE) or (obj_game.game_type == MARATHON))  _level = _level mod 10; 
 

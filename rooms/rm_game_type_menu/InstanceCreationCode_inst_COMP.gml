@@ -6,6 +6,7 @@ selectable = false;
 activate_button = function(){
 	obj_game.multiplayer_mode = 2;
 	obj_game.sbvs = true;
+	obj_game.game_type = -1;
 	selected = true;
 
 	inst_COOP.selected = false;

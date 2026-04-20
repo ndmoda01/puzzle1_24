@@ -43,7 +43,11 @@ if (special_draw == false){
 	}
 	//can't select it
 	else {
+		
 		if (draw_background) draw_sprite_ext(spr_button_frame,4,x,y-2,button_xscale,button_yscale,0,c_white,1);
+		if (place_meeting(x,y,obj_menu_cursor)){
+			if (draw_background) draw_sprite_ext(spr_button_frame,5,x,y-2,button_xscale,button_yscale,0,c_white,1);
+		}
 		var c = c_dkgray;
 		draw_text_color(x+my_text_x_offset,y+my_text_y_offset,my_text,c,c,c,c,1);	
 	}

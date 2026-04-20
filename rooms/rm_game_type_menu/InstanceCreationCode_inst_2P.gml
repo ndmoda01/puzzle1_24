@@ -4,7 +4,9 @@ my_text_2 = "Two player game";
 
 activate_button = function(){
 	obj_game.number_of_players = 2;
+	obj_game.game_type = -1;
 	//obj_game.sbvs = false;
+	
 	selected = true;
 	inst_1P.selected = false;
 	if (instance_exists(inst_3P) and (instance_exists(inst_4P))){

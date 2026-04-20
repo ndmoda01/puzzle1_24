@@ -486,13 +486,13 @@ if ((key_select) and holding == true){
 					//var _multi_bonus = highest_score_collection_instance*number_of_collections*_player_multi;
 					var _multi_bonus = (_hoz_score+_ver_score+_diag_bs_score+_diag_fs_score)*_player_multi;
 					obj_game.player1_score += _multi_bonus;
-					if (obj_game.game_type == COLOR_CLASH) var _inst_color_card = instance_create_layer(instance_holding_id.x,instance_holding_id.y,"Player_backgrounds",obj_player1_background);
+					if (obj_game.game_type == COLOR_CLASH) and (layer_exists("Player_backgrounds")) var _inst_color_card = instance_create_layer(instance_holding_id.x,instance_holding_id.y,"Player_backgrounds",obj_player1_background);
 				break;
 				case 2: 
 					//var _multi_bonus = highest_score_collection_instance*number_of_collections*_player_multi;	
 					var _multi_bonus = (_hoz_score+_ver_score+_diag_bs_score+_diag_fs_score)*_player_multi;
 					obj_game.player2_score += _multi_bonus;
-					if (obj_game.game_type == COLOR_CLASH) var _inst_color_card = instance_create_layer(instance_holding_id.x,instance_holding_id.y,"Player_backgrounds",obj_player2_background);
+					if (obj_game.game_type == COLOR_CLASH) and (layer_exists("Player_backgrounds")) var _inst_color_card = instance_create_layer(instance_holding_id.x,instance_holding_id.y,"Player_backgrounds",obj_player2_background);
 				break;
 				case 3: 
 					//var _multi_bonus = highest_score_collection_instance*number_of_collections*_player_multi;

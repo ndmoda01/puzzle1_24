@@ -6,6 +6,7 @@ selectable = false;
 activate_button = function(){
 	obj_game.multiplayer_mode = 1;
 	obj_game.sbvs = false;
+	obj_game.game_type = -1;
 	selected = true;
 
 	inst_COMP.selected = false;
@@ -38,7 +39,21 @@ activate_button = function(){
 	//obj_menu_cursor.position_index = 6;
 	//obj_menu_cursor.position_index = 4;
 	with(obj_menu_cursor){
-		//player select positionns
+		////player select positionns
+		//position[0] = [55, 63];
+		//position[1] = [55, 87];
+		//position[2] = [55, 199];
+		//position[3] = [55, 223];
+		//position[4] = [260,63];
+		//position[5] = [260,87];
+		//position[6] = [260,111];
+		////position[7] = [260,135];
+		//position[7] = [470,199];
+		//position[8] = -1; //must be reset in case it's switched from comp to coop
+		//position[9] = -1;
+		
+		//position_index = 4;
+		
 		position[0] = [55, 63];
 		position[1] = [55, 87];
 		position[2] = [55, 199];
@@ -46,10 +61,10 @@ activate_button = function(){
 		position[4] = [260,63];
 		position[5] = [260,87];
 		position[6] = [260,111];
-		//position[7] = [260,135];
-		position[7] = [470,199];
-		position[8] = -1; //must be reset in case it's switched from comp to coop
-		position[9] = -1;
+		position[7] = [260,135];
+		position[8] = [260,159];
+		position[9] = [470,199];
+		position[10] = -1;
 		
 		position_index = 4;
 	}
