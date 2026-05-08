@@ -5,3 +5,4 @@
 event_inherited();
 
 my_type = BLOCK;
+my_color = #CCBEAB;

@@ -72,31 +72,43 @@ else{
 				var _dir = instance_create_layer(x,y,"Walls",obj_score_direction_card); 
 				_dir.image_index = 1;
 				//var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
-				//_slice.sprite_index = spr_apple2_p1_split_v;
+				//_slice.sprite_index = spr_apple2_p1_split_v_2;
 	
 			break;	
 			case 2: //forward slash
 				var _dir = instance_create_layer(x,y,"Walls",obj_score_direction_card); 
 				_dir.image_index = 2;
 				//var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
-				//_slice.sprite_index = spr_apple2_p1_split_fs;
-	
+				//_slice.sprite_index = spr_apple2_p1_split_fs_2;
+				
 			break;	
 			case 3: //back slash
 				var _dir = instance_create_layer(x,y,"Walls",obj_score_direction_card); 
 				_dir.image_index = 3;
 				//var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
-				//_slice.sprite_index = spr_apple2_p1_split_bs;
+				//_slice.sprite_index = spr_apple2_p1_split_bs_2;
 	
 			break;	
 		}
 	}
 	
-	repeat(8){
+	//repeat(8){
+	var _parts_qty = my_collection_qty*2;
+	var _buff = round(360/_parts_qty);
+	var i=0;
+	
+	repeat(_parts_qty){
 		var _part = instance_create_layer(x+8,y+8,"Instances_1",obj_explode_particle);
 		_part.image_blend = my_color;
+		//_part.my_lifespan = irandom_range(my_collection_qty*4,my_collection_qty*10);
 		_part.my_lifespan = my_collection_qty*5;
-		_part.spd = round(my_collection_qty/2)+1;
+		//_part.my_lifespan = 30;
+		//_part.move_speed = irandom_range(round(my_collection_qty/9)+1,(my_collection_qty/3)+1);
+		_part.move_speed = round(my_collection_qty/2);
+		//_part.move_speed = 2;
 		_part.my_creator_id = id;
+		var _offset = 0; //i*;
+		_part.direction = (_buff*i)+_offset;
+		i++;
 	}
 }

@@ -28,8 +28,8 @@
   "nineSlice":null,
   "origin":4,
   "parent":{
-    "name":"Fruit",
-    "path":"folders/Sprites/Fruit.yy",
+    "name":"Lemon",
+    "path":"folders/Sprites/Fruit/Lemon.yy",
   },
   "preMultiplyAlpha":false,
   "resourceType":"GMSprite",

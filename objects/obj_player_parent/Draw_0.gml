@@ -15,7 +15,10 @@ if (instance_holding_sprite_index != noone){
 	draw_self();	
 	//draw what you're holding
 	//pick up, enlarge and make item slightly transparent
-	draw_sprite_ext(instance_holding_sprite_index,instance_holding_image_index,x-1,y-1,1.1,1.1,0,c_white,.85);
+	var _scale = 1.2;
+	//draw_sprite_ext(instance_holding_sprite_index,instance_holding_image_index,x-1,y-1,1.1,1.1,0,c_white,.85);
+	draw_sprite_ext(instance_holding_sprite_index,instance_holding_image_index,x,y,_scale-.1,_scale-.1,0,c_black,.35);
+	draw_sprite_ext(instance_holding_sprite_index,instance_holding_image_index,x-2,y-4,_scale,_scale,0,c_white,.85);
 	
 }
 else{

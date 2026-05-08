@@ -534,6 +534,7 @@ if ((key_select) and holding == true){
 			//destroy it and reset
 			instance_destroy(instance_holding_id);
 			obj_game.remaining_items--;
+			audio_play_sound(snd_explode_2,1,false);
 			audio_play_sound(snd_collect_line,5,false);
 			instance_holding_id = noone;
 			
