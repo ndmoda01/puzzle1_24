@@ -31,8 +31,8 @@
   "resourceVersion":"2.0",
   "solid":true,
   "spriteId":{
-    "name":"spr_rock_1x1_2",
-    "path":"sprites/spr_rock_1x1_2/spr_rock_1x1_2.yy",
+    "name":"spr_rock_1x1_3",
+    "path":"sprites/spr_rock_1x1_3/spr_rock_1x1_3.yy",
   },
   "spriteMaskId":null,
   "visible":true,

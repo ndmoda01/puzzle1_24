@@ -11,13 +11,13 @@ switch(room){
 	#region //1 player
 	case rm_1P_level_01: scr_level_start(_level_timer,_spawn_timer,60,4,3,[1,2,3],.6,false);    break;
 	case rm_1P_level_02: scr_level_start(_level_timer,_spawn_timer,54,5,3,[2,3,4],.6,false);    break;
-	case rm_1P_level_03: scr_level_start(_level_timer,_spawn_timer,50,6,3,[3,4,5],.45,false);   break;
-	case rm_1P_level_04: scr_level_start(_level_timer,_spawn_timer,44,8,4,[1,2,3,4],.5,false);  break;
-	case rm_1P_level_05: scr_level_start(_level_timer,_spawn_timer,38,8,4,[2,3,4,5],.45,false); break;
-	case rm_1P_level_06: scr_level_start(_level_timer,_spawn_timer,40,9,4,[1,3,4,5],.4,false);  break;
-	case rm_1P_level_07: scr_level_start(_level_timer,_spawn_timer,38,10,4,[1,2,4,5],.4,false); break;
-	case rm_1P_level_08: scr_level_start(_level_timer,_spawn_timer,34,10,3,[1,2,3],.45,false);  break;
-	case rm_1P_level_09: scr_level_start(_level_timer,_spawn_timer,36,11,4,[2,3,4,5],.4,false); break;
+	case rm_1P_level_03: scr_level_start(_level_timer,_spawn_timer,50,6,3,[3,4,31],.45,false);   break;
+	case rm_1P_level_04: scr_level_start(_level_timer,_spawn_timer,44,8,4,[1,2,33,4],.5,false);  break;
+	case rm_1P_level_05: scr_level_start(_level_timer,_spawn_timer,38,8,4,[31,33,4,5],.45,false); break;
+	case rm_1P_level_06: scr_level_start(_level_timer,_spawn_timer,40,9,4,[35,3,4,5],.4,false);  break;
+	case rm_1P_level_07: scr_level_start(_level_timer,_spawn_timer,38,10,4,[1,2,33,31],.4,false); break;
+	case rm_1P_level_08: scr_level_start(_level_timer,_spawn_timer,34,10,3,[1,35,3],.45,false);  break;
+	case rm_1P_level_09: scr_level_start(_level_timer,_spawn_timer,36,11,4,[2,3,33,5],.4,false); break;
 	case rm_1P_level_10: scr_level_start(_level_timer,_spawn_timer,32,12,4,[1,2,3,4],.4,false); break;
 	case rm_1P_level_EN: scr_endurance_room_start();								  break;
 	case rm_1P_level_MA: scr_level_start(_level_timer,_spawn_timer,58,4,3,[1,2,3],.6,false);    break;
@@ -27,14 +27,14 @@ switch(room){
 	#region //2 player
 	case rm_2P_level_01: scr_level_start(_level_timer,_spawn_timer,40,3,3,[1,2,3],.6,false);    break;
 	case rm_2P_level_02: scr_level_start(_level_timer,_spawn_timer,34,5,3,[2,3,4],.55,false);   break;
-	case rm_2P_level_03: scr_level_start(_level_timer,_spawn_timer,30,6,3,[3,4,5],.55,false);   break;
+	case rm_2P_level_03: scr_level_start(_level_timer,_spawn_timer,30,6,3,[35,4,5],.55,false);   break;
 	case rm_2P_level_04: scr_level_start(_level_timer,_spawn_timer,28,8,4,[1,2,3,4],.55,false); break;
-	case rm_2P_level_05: scr_level_start(_level_timer,_spawn_timer,24,8,4,[2,3,4,5],.55,false); break;
-	case rm_2P_level_06: scr_level_start(_level_timer,_spawn_timer,23,10,4,[2,3,4,5],.55,false);break;
-	case rm_2P_level_07: scr_level_start(_level_timer,_spawn_timer,22,10,4,[1,3,4,5],.55,false);break;
-	case rm_2P_level_08: scr_level_start(_level_timer,_spawn_timer,21,12,4,[1,2,4,5],.55,false);break;
-	case rm_2P_level_09: scr_level_start(_level_timer,_spawn_timer,20,12,4,[1,2,3,5],.4,false); break;
-	case rm_2P_level_10: scr_level_start(_level_timer,_spawn_timer,18,13,4,[1,2,3,4],.45,false);break;
+	case rm_2P_level_05: scr_level_start(_level_timer,_spawn_timer,24,8,4,[1,3,35,5],.55,false); break;
+	case rm_2P_level_06: scr_level_start(_level_timer,_spawn_timer,23,10,4,[2,32,4,5],.55,false);break;
+	case rm_2P_level_07: scr_level_start(_level_timer,_spawn_timer,22,10,4,[1,3,4,35],.55,false);break;
+	case rm_2P_level_08: scr_level_start(_level_timer,_spawn_timer,21,12,4,[1,2,31,5],.55,false);break;
+	case rm_2P_level_09: scr_level_start(_level_timer,_spawn_timer,20,12,4,[32,2,3,5],.4,false); break;
+	case rm_2P_level_10: scr_level_start(_level_timer,_spawn_timer,18,13,4,[1,35,3,4],.45,false);break;
 	case rm_2P_level_EN: scr_endurance_room_start();                                  break;
 	case rm_2P_level_MA: scr_level_start(_level_timer,_spawn_timer,34,3,3,[1,2,3],.6,false);    break;
 	case rm_2P_level_CU: scr_level_start(_level_timer,_spawn_timer,45,3,3,[1,2,3],.2,false);    break;
@@ -44,23 +44,23 @@ switch(room){
 	#region //2 player vs
 	case rm_2P_level_01_VS: scr_level_start(_level_timer,_spawn_timer,60,4,3,[1,2,3],.6,true);   break;
 	case rm_2P_level_02_VS: scr_level_start(_level_timer,_spawn_timer,54,5,3,[2,3,4],.6,true);   break;
-	case rm_2P_level_03_VS: scr_level_start(_level_timer,_spawn_timer,50,6,3,[3,4,5],.45,true);  break;
+	case rm_2P_level_03_VS: scr_level_start(_level_timer,_spawn_timer,50,6,3,[35,4,5],.45,true);  break;
 	case rm_2P_level_04_VS: scr_level_start(_level_timer,_spawn_timer,44,8,4,[1,2,3,4],.5,true); break;
-	case rm_2P_level_05_VS: scr_level_start(_level_timer,_spawn_timer,38,8,4,[2,3,4,5],.50,true);break;
-	case rm_2P_level_06_VS: scr_level_start(_level_timer,_spawn_timer,40,9,4,[1,3,4,5],.4,true); break;
-	case rm_2P_level_07_VS: scr_level_start(_level_timer,_spawn_timer,38,10,4,[1,2,4,5],.4,true);break;
-	case rm_2P_level_08_VS: scr_level_start(_level_timer,_spawn_timer,34,10,3,[1,2,3],.45,true); break;
-	case rm_2P_level_09_VS: scr_level_start(_level_timer,_spawn_timer,36,11,4,[2,3,4,5],.4,true);break;
-	case rm_2P_level_10_VS: scr_level_start(_level_timer,_spawn_timer,32,12,4,[1,2,3,4],.4,true);break;
+	case rm_2P_level_05_VS: scr_level_start(_level_timer,_spawn_timer,38,8,4,[1,3,35,5],.50,true);break;
+	case rm_2P_level_06_VS: scr_level_start(_level_timer,_spawn_timer,40,9,4,[2,32,4,5],.4,true); break;
+	case rm_2P_level_07_VS: scr_level_start(_level_timer,_spawn_timer,38,10,4,[1,3,4,35],.4,true);break;
+	case rm_2P_level_08_VS: scr_level_start(_level_timer,_spawn_timer,34,10,3,[32,2,3],.45,true); break;
+	case rm_2P_level_09_VS: scr_level_start(_level_timer,_spawn_timer,36,11,4,[32,2,3,5],.4,true);break;
+	case rm_2P_level_10_VS: scr_level_start(_level_timer,_spawn_timer,32,12,4,[1,35,3,4],.4,true);break;
 	case rm_2P_level_EN_VS: scr_endurance_room_start();                                break;
 	case rm_2P_level_MA_VS: scr_level_start(_level_timer,_spawn_timer,58,4,3,[1,2,3],.6,true);   break;
 	case rm_2P_level_CU_VS: scr_level_start(_level_timer,_spawn_timer,62,4,3,[1,2,3],.2,true);   break;
 	case rm_2P_level_BO_VS: scr_level_start(_level_timer,_spawn_timer,42,8,4,[1,2,3,4],.7,true);   break;
-	case rm_2P_level_BO_VS_02: scr_level_start(_level_timer,_spawn_timer,36,10,4,[2,3,4,5],.7,true);   break;
-	case rm_2P_level_BO_VS_03: scr_level_start(_level_timer,_spawn_timer,32,12,4,[1,2,4,5],.7,true);   break;
+	case rm_2P_level_BO_VS_02: scr_level_start(_level_timer,_spawn_timer,36,10,4,[32,33,31,5],.7,true);   break;
+	case rm_2P_level_BO_VS_03: scr_level_start(_level_timer,_spawn_timer,32,12,4,[1,32,4,35],.7,true);   break;
 	case rm_2P_level_CC_1: scr_level_start(_level_timer,_spawn_timer,34,3,3,[1,2,3,4],.7,false);    break;
-	case rm_2P_level_CC_2: scr_level_start(_level_timer,_spawn_timer,28,3,3,[2,3,4,5],.7,false);    break;
-	case rm_2P_level_CC_3: scr_level_start(_level_timer,_spawn_timer,20,3,3,[1,2,4,5],.7,false);    break;
+	case rm_2P_level_CC_2: scr_level_start(_level_timer,_spawn_timer,28,3,3,[32,31,33,35],.7,false);    break;
+	case rm_2P_level_CC_3: scr_level_start(_level_timer,_spawn_timer,20,3,3,[1,5,33,35],.7,false);    break;
 	
 	#endregion
 	
