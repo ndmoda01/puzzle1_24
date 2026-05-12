@@ -5,8 +5,8 @@ fps_counter = 0;
 fps_per_second = 0;
 
 //max supported score 9,999,999
-player1_score = 999999;
-player2_score = 99999;
+player1_score = 5010;
+player2_score = 5022;
 player3_score = 0;
 player4_score = 0;
 coop_score = 0;
@@ -21,7 +21,7 @@ player_starting_lives = 3;
 player1_lives = player_starting_lives;
 player2_lives = player_starting_lives;
 
-level = 1;
+level = 10;
 level_timer = 300*SEC;
 calculated_level_score = false;
 level_free_space_bonus_score = 0;
@@ -111,15 +111,15 @@ item_spawn_rate_sbvs_2 = item_spawn_rate_max;
 item_spawn_rate_reduced_rate_max = 20; //faster rate that items spawn in sbvs (max speed for any player)
 
 //game defaults 
-number_of_players = 0;
+number_of_players = 2;
 //number_of_players = 3;
 
 //multiplayer mode: 0 = single player, 1 = multiplayer coop, 2 = multiplayer competitive
-multiplayer_mode = 2;
+multiplayer_mode = 1;
 //multiplayer_mode = 2;
 
 //game type: 0 = classic (timer & designed levels), 1 = endurance (fruit qty & generated levels)
-game_type = COLOR_CLASH;
+game_type = CLASSIC;
 //split board multiplayer on or off
 sbvs = true;
 //sbvs = false;

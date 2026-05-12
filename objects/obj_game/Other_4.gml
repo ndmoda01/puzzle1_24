@@ -656,7 +656,7 @@ switch(room){
 	
 	case rm_ending:
 		//set input delay alarm so you don't accidently click through it too fast
-		alarm[0] = SEC*10;
+		alarm[0] = SEC*5;
 	break;
 	
 	case rm_main_menu:

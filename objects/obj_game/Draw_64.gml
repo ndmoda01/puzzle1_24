@@ -264,9 +264,11 @@ else if (room == rm_high_scores){
 		
 		//timemout
 		if (registration_timer <= 0){
-			scr_save_updated_scores();
-			if (instance_exists(obj_high_score_letter_selector_parent)){instance_destroy(obj_high_score_letter_selector_parent);}
-			high_score_state = "display";
+			//auto register a name when END isn't clicked and time runs out
+			registration_completed = true;
+			//scr_save_updated_scores();
+			//if (instance_exists(obj_high_score_letter_selector_parent)){instance_destroy(obj_high_score_letter_selector_parent);}
+			//high_score_state = "display";
 		}
 	}
 	#endregion
@@ -1533,7 +1535,7 @@ else{
 	if (_remaining_time < 0) and (game_over == false) and (game_type == CLASSIC) and (!instance_exists(obj_room_transition_fade)){
 		draw_set_halign(fa_center);
 		if (sbvs == true){
-			if (obj_player1.knocked_out == true) or (obj_player2.knocked_out == true){
+			if ((instance_exists(obj_player1) and (obj_player1.knocked_out == true)) or (instance_exists(obj_player2) and (obj_player2.knocked_out == true))){
 				//if (instance_exists(obj_player1)) and (obj_player1.knocked_out == true) draw_text(_view_width/2, 12,"Player 1 Knocked Out!");	
 				//if (instance_exists(obj_player2)) and (obj_player2.knocked_out == true) draw_text(_view_width/2, 12,"Player 2 Knocked Out!");
 				

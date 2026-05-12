@@ -73,7 +73,17 @@ if (place_meeting(x,y,obj_space_check_stop)){
 			break;
 			case ORANGE: _type = obj_orange;
 			break;
-		
+			case LEMON: _type = obj_lemon;
+			break;
+			case PUMPKIN: _type = obj_pumpkin;
+			break;
+			case STRAWBERRY: _type = obj_strawberry;
+			break;
+			case WATERMELON: _type = obj_watermelon;
+			break;
+			case PEAR: _type = obj_pear;
+			break;
+	
 		}	
 			
 		//spawn the instance and increase the counter

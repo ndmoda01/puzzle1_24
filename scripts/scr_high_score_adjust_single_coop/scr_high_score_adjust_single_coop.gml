@@ -61,10 +61,13 @@ function scr_high_score_adjust_single_coop(argument0,argument1,argument2,argumen
 						break;
 					}
 					
+					draw_text(30,40,string(coop_score));
+					
 					//run through the high score array
 					for (var i=1; i <= _max_entries; i++){
 						//see if the player's score is higher than all entries, starting higest to lowest
 						if (coop_score > high_score_array[_game_type,i]){	
+							draw_text(30,60,string(high_score_array[_game_type,i]));
 							//adjust scores to be one rank lower, loop through and copy as lower rank
 							for (var j = _max_entries; j > i; j--){
 								//start at the bottom score	
