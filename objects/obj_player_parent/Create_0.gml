@@ -14,7 +14,8 @@ move_amount = 16;
 movement_manager = 0;
 
 //amount of frames that need to pass before the next move can be made (higher number = slower movement)
-regular_movement_rate = 12;
+//regular_movement_rate = 12;
+regular_movement_rate = 10;
 fast_movement_rate = 5;
 movement_timer = regular_movement_rate;
 h_move = 0;

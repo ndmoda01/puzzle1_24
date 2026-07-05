@@ -51,7 +51,8 @@ v_move = (_vertical * move_amount);
 //if ((key_left_held) >= 24) and ((key_left_held) < 600) movement_timer = 4;
 
 //increase speed (by decreasing the movement timer) if run button is held down
-var _hold_min = 12;
+//var _hold_min = 12; //maybe too long and contributing to a laggy movement
+var _hold_min = 1;
 if (key_run) or (key_left_held > _hold_min)or (key_right_held > _hold_min)or (key_down_held > _hold_min)or (key_up_held > _hold_min){
 	movement_timer = fast_movement_rate;
 }
