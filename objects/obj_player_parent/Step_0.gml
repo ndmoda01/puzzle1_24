@@ -51,7 +51,7 @@ v_move = (_vertical * move_amount);
 //if ((key_left_held) >= 24) and ((key_left_held) < 600) movement_timer = 4;
 
 //increase speed (by decreasing the movement timer) if run button is held down
-var _hold_min = 1;
+var _hold_min = 12;
 if (key_run) or (key_left_held > _hold_min)or (key_right_held > _hold_min)or (key_down_held > _hold_min)or (key_up_held > _hold_min){
 	movement_timer = fast_movement_rate;
 }
@@ -62,7 +62,6 @@ else{
 //set up a movement manager to limit the number of movements when a key is held down
 //overlaping players possible version
 if (movement_manager < 3){
-//if (movement_manager < 3000){
 	//check for collision, move if there won't be one
 	//if (!place_meeting(x+h_move,y,obj_wall)) and (!place_meeting(x+h_move,y,obj_block)) and (!place_meeting(x+h_move,y,obj_block_color)){
 	if (!place_meeting(x+h_move,y,obj_wall)) and (!place_meeting(x+h_move,y,obj_block)){
@@ -526,6 +525,7 @@ if ((key_select) and holding == true){
 			collection_details_array[collection_details_index][HORZT_QTY] = hl+hr+1;
 			
 			
+	
 			//increase the index so next collection will be saved in another entry
 			collection_details_index++;
 				

@@ -1,8 +1,6 @@
 /// @description Insert description here
 if (live_call()) return live_result;
 
-if (instance_exists(obj_fruit_parent)) instance_destroy(obj_fruit_parent);
-
 if (room == rm_controls) exit;
 if (room == rm_credits) exit;
 if (room == rm_ending) exit;
