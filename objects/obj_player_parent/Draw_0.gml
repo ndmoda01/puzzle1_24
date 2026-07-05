@@ -27,3 +27,6 @@ else{
 	}
 	draw_self();
 }
+
+//draw_text(x,y+10,"timer: "+string(movement_timer));
+//draw_text(x,y+30,"timer: "+string(movement_manager));
