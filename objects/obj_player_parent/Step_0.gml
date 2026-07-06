@@ -511,21 +511,64 @@ if ((key_select) and holding == true){
 			_inst_score_card.my_score = _multi_bonus;
 			
 			//calculate the collection's details
-			collection_details_array[collection_details_index][TOTAL_QTY] = ((hl+hr)+(vu+vd)+(dbsd+dbsu)+(dfsd+dfsu)+1);
-			collection_details_array[collection_details_index][DBASD_QTY] = dbsd;
-			collection_details_array[collection_details_index][DBASU_QTY] = dbsu;
-			collection_details_array[collection_details_index][DFRSD_QTY] = dfsu;
-			collection_details_array[collection_details_index][DFRSU_QTY] = dfsd;
-			collection_details_array[collection_details_index][VRTDO_QTY] = vd;
-			collection_details_array[collection_details_index][VRTUP_QTY] = vu;
-			collection_details_array[collection_details_index][HRZLE_QTY] = hl;
-			collection_details_array[collection_details_index][HRZRI_QTY] = hr;
-			collection_details_array[collection_details_index][DBAST_QTY] = dbsd+dbsu+1;
-			collection_details_array[collection_details_index][DFRST_QTY] = dfsu+dfsd+1;
-			collection_details_array[collection_details_index][VERTT_QTY] = vd+vu+1;
-			collection_details_array[collection_details_index][HORZT_QTY] = hl+hr+1;
+			//collection_details_array[collection_details_index][TOTAL_QTY] = ((hl+hr)+(vu+vd)+(dbsd+dbsu)+(dfsd+dfsu)+1);
+			
+			//check total in each line direction
+			var _dbasl_total = dbsd+dbsu+1;
+			var _dfrsl_total = dfsu+dfsd+1;
+			var _horiz_total = hl+hr+1;
+			var _verti_total = vd+vu+1;
+
+			
+			//if the collection meets the level min, save the data to the array
+			if (_dbasl_total >= level_collection_min){
+				line_scored_bas_diagonal = true; //these variables likely not needed, this detail will be saved in array
+				collection_details_array[collection_details_index][DBASL_LINE] = true;
+				collection_details_array[collection_details_index][DBASD_QTY] = dbsd;
+				collection_details_array[collection_details_index][DBASU_QTY] = dbsu;
+				collection_details_array[collection_details_index][DBAST_QTY] = dbsd+dbsu+1;
+				collection_details_array[collection_details_index][TOTAL_QTY] += dbsd+dbsu;
+				total_lines_scored_bas_diagonal++;
+			}
+			if (_dfrsl_total >= level_collection_min){
+				line_scored_frs_diagonal = true;
+				collection_details_array[collection_details_index][DFRSL_LINE] = true;
+				collection_details_array[collection_details_index][DFRSD_QTY] = dfsu;
+				collection_details_array[collection_details_index][DFRSU_QTY] = dfsd;
+				collection_details_array[collection_details_index][DFRST_QTY] = dfsu+dfsd+1;
+				collection_details_array[collection_details_index][TOTAL_QTY] += dfsu+dfsd;
+				total_lines_scored_frs_diagonal++;
+			}
+			if (_verti_total >= level_collection_min){
+				line_scored_vertical = true;
+				collection_details_array[collection_details_index][VERTI_LINE] = true;
+				collection_details_array[collection_details_index][VRTDO_QTY] = vd;
+				collection_details_array[collection_details_index][VRTUP_QTY] = vu;
+				collection_details_array[collection_details_index][VERTT_QTY] = vd+vu+1;
+				collection_details_array[collection_details_index][TOTAL_QTY] += vd+vu;
+				total_lines_scored_vertical++;
+			}
+			if (_horiz_total >= level_collection_min){
+				line_scored_horizontal = true;
+				collection_details_array[collection_details_index][HORIZ_LINE] = true;
+				collection_details_array[collection_details_index][HRZLE_QTY] = hl;
+				collection_details_array[collection_details_index][HRZRI_QTY] = hr;
+				collection_details_array[collection_details_index][HORZT_QTY] = hl+hr+1;
+				collection_details_array[collection_details_index][TOTAL_QTY] += hl+hr;
+				total_lines_scored_horizontal++;
+			}
 			
 			
+			//if ((_dbasl_total or _dfrsl_total or _verti_total or _horiz_total) >= level_collection_min){
+			//if (line_scored_bas_diagonal or line_scored_frs_diagonal or line_scored_vertical or line_scored_horizontal){
+			//	collection_details_array[collection_details_index][TOTAL_QTY] += 1;
+			//}
+			
+			//add in holding instance to total quantity if there is at least one collection (already confirmed above that there is a collection)
+			collection_details_array[collection_details_index][TOTAL_QTY] += 1;
+			
+			//add collection type (referencing the held item's type)
+			collection_details_array[collection_details_index][COLLECT_TYPE] = instance_holding_id.my_type;
 	
 			//increase the index so next collection will be saved in another entry
 			collection_details_index++;
@@ -554,7 +597,11 @@ if ((key_select) and holding == true){
 		
 		instance_holding_id = noone;
 		ds_grid_clear(collection_grid,0);
-			
+		line_scored_bas_diagonal = false;
+		line_scored_frs_diagonal = false;
+		line_scored_vertical = false;
+		line_scored_horizontal = false;
+		
 		//swap in temp fruit to be the current one held
 		if (instance_holding_id_temp != noone){
 			instance_holding_id = instance_holding_id_temp;

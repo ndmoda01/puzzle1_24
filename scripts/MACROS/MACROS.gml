@@ -77,6 +77,11 @@ function MACROS(){
 	#macro DFRST_QTY 10
 	#macro VERTT_QTY 11
 	#macro HORZT_QTY 12 
+	#macro HORIZ_LINE 13
+	#macro VERTI_LINE 14
+	#macro DBASL_LINE 15
+	#macro DFRSL_LINE 16
+	#macro COLLECT_TYPE 17
 	
 	
 	

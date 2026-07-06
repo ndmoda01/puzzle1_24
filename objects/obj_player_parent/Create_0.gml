@@ -70,6 +70,12 @@ for (var i = 0; i <100; i++){
 	collection_details_array[collection_details_index][DFRST_QTY] = 0;
 	collection_details_array[collection_details_index][VERTT_QTY] = 0;
 	collection_details_array[collection_details_index][HORZT_QTY] = 0;
+	collection_details_array[collection_details_index][DBASL_LINE] = false;
+	collection_details_array[collection_details_index][DFRSL_LINE] = false;
+	collection_details_array[collection_details_index][VERTI_LINE] = false;
+	collection_details_array[collection_details_index][HORIZ_LINE] = false;
+	collection_details_array[collection_details_index][COLLECT_TYPE] = -1;
+	
 }
 collection_details_index = 1;
 
@@ -77,6 +83,17 @@ player_number = 1;
 
 currently_frozen = false;
 knocked_out = false;
+
+line_scored_horizontal = false;
+line_scored_vertical = false;
+line_scored_frs_diagonal = false;
+line_scored_bas_diagonal = false;
+
+//these variables don't need to be reset because they are deleted when player is destroyed
+total_lines_scored_horizontal = 0;
+total_lines_scored_vertical = 0;
+total_lines_scored_frs_diagonal = 0;
+total_lines_scored_bas_diagonal = 0;
 
 scoring_qty_hl = 0;
 scoring_qty_hr = 0;
