@@ -6,6 +6,7 @@
 
 function scr_collection_qty_check(argument0,argument1,argument2, argument3){
 
+
 	var _dir_enum = argument0;
 	var _dir_id_array = argument1;
 	var _dir_counter = argument2;
@@ -29,6 +30,7 @@ function scr_collection_qty_check(argument0,argument1,argument2, argument3){
 	var _item_collection_max = 10	
 	//if the quantity is higher than level min, score the items
 	if (_dir_counter >= level_collection_min){
+		
 		
 		number_of_collections ++;
 		

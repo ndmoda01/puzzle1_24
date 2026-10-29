@@ -5,13 +5,17 @@ y_speed = lengthdir_y(move_speed,direction);
 if (place_meeting(x+x_speed,y,obj_wall) or place_meeting(x+x_speed,y,obj_block)) {
 	//direction += choose(-45,45);
 	direction = abs(180-direction);
-	x_speed = 0;	
+	x_speed = 0;
+	
+	if(destroy_on_contact) instance_destroy();
 }
 
 if (place_meeting(x,y+y_speed,obj_wall) or place_meeting(x,y+y_speed,obj_block)){
 	//direction += choose(-45,45);
 	direction = abs(360-direction);
 	y_speed = 0;
+	
+	if(destroy_on_contact) instance_destroy();
 }
 
 x = x+x_speed;

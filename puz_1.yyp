@@ -102,7 +102,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.3.217",
+    "IDEVersion":"2024.14.4.222",
   },
   "name":"puz_1",
   "resources":[
@@ -320,6 +320,7 @@
     {"id":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"id":{"name":"rm_test_room_320_2P_VS","path":"rooms/rm_test_room_320_2P_VS/rm_test_room_320_2P_VS.yy",},},
     {"id":{"name":"rm_test_room_320","path":"rooms/rm_test_room_320/rm_test_room_320.yy",},},
+    {"id":{"name":"rm_test_room_640_2","path":"rooms/rm_test_room_640_2/rm_test_room_640_2.yy",},},
     {"id":{"name":"rm_test_room_640","path":"rooms/rm_test_room_640/rm_test_room_640.yy",},},
     {"id":{"name":"__scribble_class_element","path":"scripts/__scribble_class_element/__scribble_class_element.yy",},},
     {"id":{"name":"__scribble_class_event","path":"scripts/__scribble_class_event/__scribble_class_event.yy",},},
@@ -721,6 +722,7 @@
   "resourceVersion":"2.0",
   "RoomOrderNodes":[
     {"roomId":{"name":"rm_initial_room","path":"rooms/rm_initial_room/rm_initial_room.yy",},},
+    {"roomId":{"name":"rm_test_room_640_2","path":"rooms/rm_test_room_640_2/rm_test_room_640_2.yy",},},
     {"roomId":{"name":"rm_test_room_640","path":"rooms/rm_test_room_640/rm_test_room_640.yy",},},
     {"roomId":{"name":"rm_main_menu","path":"rooms/rm_main_menu/rm_main_menu.yy",},},
     {"roomId":{"name":"rm_2P_level_CC_1","path":"rooms/rm_2P_level_CC_1/rm_2P_level_CC_1.yy",},},

@@ -5,8 +5,8 @@ fps_counter = 0;
 fps_per_second = 0;
 
 //max supported score 9,999,999
-player1_score = 5010;
-player2_score = 5022;
+player1_score = 0;
+player2_score = 0;
 player3_score = 0;
 player4_score = 0;
 coop_score = 0;
@@ -119,7 +119,7 @@ multiplayer_mode = 2;
 //multiplayer_mode = 2;
 
 //game type: 0 = classic (timer & designed levels), 1 = endurance (fruit qty & generated levels)
-game_type = COLOR_CLASH;
+game_type = CLASSIC;
 //split board multiplayer on or off
 sbvs = true;
 //sbvs = false;

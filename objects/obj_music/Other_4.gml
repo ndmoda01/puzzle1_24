@@ -1,5 +1,8 @@
+music_turned_on = true;
 var _level = obj_game.level;
 if (_level > 10) and ((obj_game.game_type == ENDURANCE) or (obj_game.game_type == MARATHON))  _level = _level mod 10; 
+
+
 
 if (room == rm_attract_mode){
 	_level = irandom_range(1,10);

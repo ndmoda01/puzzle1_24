@@ -283,7 +283,8 @@ if ((key_select) and holding == true){
 			if (_check_inst.my_type == BLOCK) or (_check_inst.my_type == BLOCK_COLOR){
 				collection_grid[# i, VERTICAL] = 0;
 				//need to adjust hr so that array location will be correct for hl 
-				hl--;
+				//hl--; //is this correct???
+				vu--;
 			}
 			else if (_check_inst.my_type != BLOCK){break;} 
 		
@@ -569,6 +570,9 @@ if ((key_select) and holding == true){
 			
 			//add collection type (referencing the held item's type)
 			collection_details_array[collection_details_index][COLLECT_TYPE] = instance_holding_id.my_type;
+			
+			//add date and time collection was scored
+			collection_details_array[collection_details_index][DATE_TIME] = string(current_day)+"/"+string(current_month)+string(current_year)+", "+string(current_hour)+":"+string(current_minute)+"."+string(current_second);
 	
 			//increase the index so next collection will be saved in another entry
 			collection_details_index++;
