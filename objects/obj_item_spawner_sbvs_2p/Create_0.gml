@@ -6,5 +6,7 @@ player2_speed_increase_items_remaining = player2_speed_increase_items_max;
 player2_speed_increase_amount = 1;
 player2_speed_level = 1;
 
+shots_this_level = 0;
+
 
 

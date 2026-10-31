@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.140023,
+  "duration":0.14002268,
   "exportDir":"",
   "name":"snd_put_down",
   "parent":{

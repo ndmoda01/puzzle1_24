@@ -29,6 +29,7 @@ if (obj_game.game_type == CLASSIC){
 		
 			scr_set_shoot_direction(_view_x,_view_y,_view_width,_view_height);
 
+			shots_this_level++;
 		}	
 	}
 }
@@ -55,7 +56,7 @@ if (obj_game.game_type == ENDURANCE){
 		
 			
 			scr_set_shoot_direction(_view_x,_view_y,_view_width,_view_height);
-			
+			shots_this_level++;
 		}	
 	}
 }
@@ -82,6 +83,7 @@ if (obj_game.game_type == MARATHON){
 	
 		
 		scr_set_shoot_direction(_view_x,_view_y,_view_width,_view_height);
+		shots_this_level++;
 	}	
 	
 }
@@ -129,6 +131,7 @@ if (obj_game.game_type == BLOCKOUT){
 	
 		
 		scr_set_shoot_direction(_view_x,_view_y,_view_width,_view_height);
+		shots_this_level++;
 	}	
 	
 }
@@ -163,6 +166,7 @@ if (obj_game.game_type == CLEANUP){
 	
 		
 			scr_set_shoot_direction(_view_x,_view_y,_view_width,_view_height);
+			shots_this_level++;
 		}	
 	}
 }

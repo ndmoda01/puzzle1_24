@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":63,
   "bbox_left":0,
-  "bbox_right":95,
+  "bbox_right":127,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -19,6 +19,7 @@
   "height":64,
   "HTile":false,
   "layers":[
+    {"$GMImageLayer":"","%Name":"2919901b-94eb-4eb5-99e9-c3ba74c02cc9","blendMode":0,"displayName":"Layer 1","isLocked":false,"name":"2919901b-94eb-4eb5-99e9-c3ba74c02cc9","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
     {"$GMImageLayer":"","%Name":"3881aabb-52b2-49e3-b910-0268f1fb298d","blendMode":0,"displayName":"default","isLocked":false,"name":"3881aabb-52b2-49e3-b910-0268f1fb298d","opacity":60.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_wall_interior",

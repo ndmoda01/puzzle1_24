@@ -10,7 +10,7 @@
   "compression":0,
   "compressionQuality":4,
   "conversionMode":0,
-  "duration":0.070023,
+  "duration":0.07002267,
   "exportDir":"",
   "name":"snd_menu_cursor_movement",
   "parent":{

@@ -119,7 +119,7 @@ multiplayer_mode = 2;
 //multiplayer_mode = 2;
 
 //game type: 0 = classic (timer & designed levels), 1 = endurance (fruit qty & generated levels)
-game_type = CLASSIC;
+game_type = COLOR_CLASH;
 //split board multiplayer on or off
 sbvs = true;
 //sbvs = false;

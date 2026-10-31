@@ -4,15 +4,15 @@ function scr_inst_score_initialize(){
 	
 	score_inst_value = array_create(41,0);
 	score_inst_value[3] = 20;
-	score_inst_value[4] = score_inst_value[3]+20;
-	score_inst_value[5] = score_inst_value[3]+40;
-	score_inst_value[6] = score_inst_value[3]+60;
-	score_inst_value[7] = score_inst_value[3]+80;
-	score_inst_value[8] = score_inst_value[3]+100;
-	score_inst_value[9] = score_inst_value[3]+120;
+	score_inst_value[4] = score_inst_value[3]+30; //+30
+	score_inst_value[5] = score_inst_value[3]+60;
+	score_inst_value[6] = score_inst_value[3]+90; 
+	score_inst_value[7] = score_inst_value[3]+110; //+20
+	score_inst_value[8] = score_inst_value[3]+120; //+10
+	score_inst_value[9] = score_inst_value[3]+130; 
 	score_inst_value[10] = score_inst_value[3]+140;
-	score_inst_value[11] = score_inst_value[3]+160;
-	score_inst_value[12] = score_inst_value[3]+180;
+	score_inst_value[11] = score_inst_value[3]+150;
+	score_inst_value[12] = score_inst_value[3]+160;
 	score_inst_value[13] = score_inst_value[3]+200;
 	score_inst_value[14] = score_inst_value[3]+220;
 	score_inst_value[15] = score_inst_value[3]+240;

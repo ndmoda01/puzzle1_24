@@ -1037,6 +1037,7 @@ else{
 			}
 			//else if (_remaining_time < 0){ }; //don't draw
 			
+			
 		}
 		
 		//endurance, remaining items
@@ -1539,15 +1540,16 @@ else{
 				//if (instance_exists(obj_player1)) and (obj_player1.knocked_out == true) draw_text(_view_width/2, 12,"Player 1 Knocked Out!");	
 				//if (instance_exists(obj_player2)) and (obj_player2.knocked_out == true) draw_text(_view_width/2, 12,"Player 2 Knocked Out!");
 				
+				//knockout ui here isn't needed at the end of the level unless knocking out will end the level instantly
 				//text background
-				draw_sprite_stretched(spr_timer_background,2,650,8,612,80);
+				//draw_sprite_stretched(spr_timer_background,2,650,8,612,80);
 					
-				if (obj_player1.knocked_out == true){ 
-					scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]P1 Knocked Out!").draw(_timer_x,_timer_y);
-				}
-				if (obj_player2.knocked_out == true){ 
-					scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]P2 Knocked Out!").draw(_timer_x,_timer_y);
-				}
+				//if (obj_player1.knocked_out == true){ 
+				//	scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]P1 Knocked Out!").draw(_timer_x,_timer_y);
+				//}
+				//if (obj_player2.knocked_out == true){ 
+				//	scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]P2 Knocked Out!").draw(_timer_x,_timer_y);
+				//}
 			}
 			else {
 				//time's up (if no one was knocked out)
@@ -1997,7 +1999,26 @@ else{
 		//stop the level
 		if (instance_exists(obj_player1) and obj_player1.knocked_out == true) or (instance_exists(obj_player2) and obj_player2.knocked_out == true){
 			//classic - end timer
-			if (game_type == CLASSIC) level_timer = -100;
+			if (game_type == CLASSIC){
+				//level_timer = -100; //uncomment to end level once one player is elminated
+				
+				//show which player was knocked out
+				var _p1_x = (view_get_wport(view_camera[0])/3)-120;
+				var _p1_y = (view_get_hport(view_camera[0])/2);
+				var _p2_x = (_p1_x*2)+360;
+				var _p2_y = (view_get_hport(view_camera[0])/2);
+					
+
+				if (obj_player1.knocked_out == true){ 
+						draw_sprite_stretched(spr_timer_background,2,_p1_x-316,_p1_y-45,612,80);
+						scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]P1 Knocked Out!").draw(_p1_x,_p1_y);
+					}
+				if (obj_player2.knocked_out == true){ 
+						draw_sprite_stretched(spr_timer_background,2,_p2_x-316,_p1_y-45,612,80);
+						scribble("[fa_center][fa_middle][fnt_game_gui_extra_large_3]P2 Knocked Out!").draw(_p2_x,_p2_y);
+				}
+	
+			}
 			//endurance - reduce remaining items
 			if (game_type == ENDURANCE) remaining_items = 0;
 			

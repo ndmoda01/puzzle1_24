@@ -1,4 +1,5 @@
-empty_space_bonus = 10;
+//empty_space_bonus = 10;
+empty_space_bonus = 5;
 
 start_x = obj_space_check_start_sbvs_2p.x;
 start_y = obj_space_check_start_sbvs_2p.y;
