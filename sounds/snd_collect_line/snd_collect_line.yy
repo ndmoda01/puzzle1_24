@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_collect_line",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Collect line",
+    "path":"folders/Sounds/Collect line.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

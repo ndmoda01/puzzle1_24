@@ -24,6 +24,11 @@ draw_text(_w/2,_h/2,my_text[text_index]);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
+if (sound_played == false){
+	audio_play_sound(my_sound[text_index],0,false);
+	sound_played = true;
+}
+
 timer--;
 if (timer <= 0){
 	
@@ -31,6 +36,7 @@ if (timer <= 0){
 	if (text_index+1 < array_length(my_text)){
 		text_index++;
 		timer = timer_max;
+		sound_played = false;
 	}
 	//else destroy
 	else instance_destroy();

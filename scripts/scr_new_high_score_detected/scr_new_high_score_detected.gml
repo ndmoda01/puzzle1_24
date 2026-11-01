@@ -15,7 +15,9 @@ function scr_new_high_score_detected(){
 	//draw_set_halign(fa_left);
 	
 	if (room == rm_ending){
-		scribble("[fa_center][fa_middle][fnt_game_gui_largest_2]NEW HIGH SCORE!").draw((_view_width/2)+3,(_view_height/2)+321);
+		scribble_anim_blink(60,10,0);
+		scribble("[fa_center][fa_middle][fnt_game_gui_largest_2][#C33846][blink]NEW HIGH SCORE![/blink]").draw((_view_width/2)+3,(_view_height/2)+321);
+		scribble_anim_reset();
 	}
 	else {	
 		scribble("[fa_center][fa_middle][fnt_game_gui_largest_2]NEW HIGH SCORE!").draw((_view_width/2)+3,(_view_height/2)+270);

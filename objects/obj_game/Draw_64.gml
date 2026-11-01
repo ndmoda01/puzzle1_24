@@ -322,12 +322,13 @@ else if (room == rm_ending){
 	
 	var _win_y = 350;
 	var _mid_x = (_view_width/2)+3;
+	var _h_buff = 70;
 	var _p1_y = 484;
-	var _p2_y = 553;
-	var _p3_y = 620;
-	var _p4_y = 688;
+	var _p2_y = _p1_y+_h_buff;
+	var _p3_y = _p1_y+(_h_buff*2);
+	var _p4_y = _p1_y+(_h_buff*3);
 	
-	scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Thank you for playing!").draw(_mid_x,215);
+	scribble("[fa_center][fa_top][fnt_game_gui_largest_2][wave]Thank you for playing![/wave]").draw(_mid_x,215);
 	
 	//draw final scores
 	if (multiplayer_mode == SINGLE_PLAYER){
@@ -337,7 +338,9 @@ else if (room == rm_ending){
 	else if (multiplayer_mode == MULTI_COOP){
 	
 		scribble("[fa_center][fa_top][fnt_game_gui_largest_2]You Win!").draw(_mid_x,_win_y);
-		scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Team:"+string(player1_score+player2_score)).draw(_mid_x,_p1_y);
+		scribble("[fa_center][fa_top][fnt_game_gui_largest_2]P1:"+string(player1_score)).draw(_mid_x,_p1_y);
+		scribble("[fa_center][fa_top][fnt_game_gui_largest_2]P2:"+string(player2_score)).draw(_mid_x,_p2_y);
+		scribble("[fa_center][fa_top][fnt_game_gui_largest_2]Team:"+string(player1_score+player2_score)).draw(_mid_x,_p4_y);
 			
 	}
 	//otherwise draw individual scores for comp mode
@@ -503,7 +506,8 @@ else if (room == rm_1P_level_00) or (room == rm_2P_level_00) or (room == rm_3P_l
 	}
 	
 	if (!instance_exists(obj_fruit_parent) and (calculated_level_score == false)){
-		audio_play_sound(snd_level_clear,4,false);
+		var _snd = choose(snd_level_clear, snd_level_clear_2, snd_level_clear_3,snd_level_clear_4);
+		audio_play_sound(_snd,4,false);
 		alarm[0] = 5*SEC;
 		calculated_level_score = true;
 	}
@@ -690,7 +694,8 @@ else if (room == rm_1P_level_00_CR) or (room == rm_2P_level_00_CR) {
 	}
 	
 	if (!instance_exists(obj_rock_color) and (calculated_level_score == false)){
-		audio_play_sound(snd_level_clear,4,false);
+		var _snd = choose(snd_level_clear, snd_level_clear_2, snd_level_clear_3,snd_level_clear_4);
+		audio_play_sound(_snd,4,false);
 		alarm[0] = 5*SEC;
 		calculated_level_score = true;
 	}
@@ -839,7 +844,8 @@ else if (room == rm_2P_level_00_RK) {
 	}
 	
 	if (!instance_exists(obj_rock) and (calculated_level_score == false)){
-		audio_play_sound(snd_level_clear,4,false);
+		var _snd = choose(snd_level_clear, snd_level_clear_2, snd_level_clear_3,snd_level_clear_4);
+		audio_play_sound(_snd,4,false);
 		alarm[0] = 5*SEC;
 		calculated_level_score = true;
 	}
@@ -1418,7 +1424,12 @@ else{
 		}
 		else {
 			//score needs to be right justfied 
-			if (multiplayer_mode == MULTI_COOP) scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(coop_score)).draw(390,52);
+			if (multiplayer_mode == MULTI_COOP){
+				
+				//scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(coop_score)).draw(390,52);
+				scribble("[fa_right][fa_middle][fnt_game_gui_coop_score]"+string(player1_score)).draw(390,31);
+				scribble("[fa_right][fa_middle][fnt_game_gui_coop_score]"+string(coop_score)).draw(390,63);
+			}
 			else scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(player1_score)).draw(390,52);
 		}
 		
@@ -1478,7 +1489,11 @@ else{
 			}
 			//other modes - score
 			else{ 
-				if (multiplayer_mode == MULTI_COOP) scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(coop_score)).draw(1902,52);
+				if (multiplayer_mode == MULTI_COOP){
+					//scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(coop_score)).draw(1902,52);
+					scribble("[fa_right][fa_middle][fnt_game_gui_coop_score]"+string(player2_score)).draw(1902,31);
+					scribble("[fa_right][fa_middle][fnt_game_gui_coop_score]"+string(coop_score)).draw(1902,63);
+				}
 				else scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(player2_score)).draw(1902,52);
 			}
 			
@@ -1591,7 +1606,8 @@ else{
 					instance_create_layer(x,y,"Instances_1",obj_space_check_cursor_final_score_sbvs_2p);
 				}
 			}
-			audio_play_sound(snd_level_clear,4,false);
+			var _snd = choose(snd_level_clear, snd_level_clear_2, snd_level_clear_3,snd_level_clear_4);
+			audio_play_sound(_snd,4,false);
 			//set a delay before being able to click to the next level
 			//alarm[0] = 5*SEC;
 			transition_delay = transition_delay_max;
@@ -1685,7 +1701,8 @@ else{
 				
 			}
 				
-			audio_play_sound(snd_level_clear,4,false);
+			var _snd = choose(snd_level_clear, snd_level_clear_2, snd_level_clear_3,snd_level_clear_4);
+			audio_play_sound(_snd,4,false);
 			//set a delay before being able to click to the next level
 			alarm[0] = 5*SEC;
 			
@@ -2091,7 +2108,8 @@ else{
 		}
 		//timer to delay pressing a button to go to next screen
 		if (calculated_level_score == false){ 
-			audio_play_sound(snd_lose,4,false);
+			var _snd = choose(snd_lose, snd_lose_2, snd_lose_3,snd_lose_4);
+			audio_play_sound(_snd,4,false);
 			alarm[0] = 5*SEC;
 			calculated_level_score = true;
 		}

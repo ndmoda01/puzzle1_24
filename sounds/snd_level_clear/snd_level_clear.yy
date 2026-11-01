@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_level_clear",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Level clear",
+    "path":"folders/Sounds/Level clear.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

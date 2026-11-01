@@ -23,6 +23,11 @@ if (room == rm_main_menu){
 		audio_play_sound(sng_princess_quest,0,true);
 	}
 }
+else if (room == rm_ending){
+	audio_stop_all();
+	audio_play_sound(sng_three_red_hearts,0,true);
+	level_music = -1;	
+}
 else if (room != rm_main_menu) and 
 (room != rm_credits) and 
 (room != rm_game_type_menu) and 
@@ -102,8 +107,4 @@ else if (room != rm_main_menu) and
 		}
 	}
 	
-}
-else if (room == rm_ending){
-	audio_stop_all();
-	level_music = -1;	
 }

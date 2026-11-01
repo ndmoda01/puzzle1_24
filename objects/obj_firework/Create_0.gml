@@ -1,4 +1,4 @@
-frames_until_explode = random_range(30,80);
+frames_until_explode = random_range(50,160);
 
 y = room_height;
 direction = 90;

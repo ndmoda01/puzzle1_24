@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_lose",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Lose",
+    "path":"folders/Sounds/Lose.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

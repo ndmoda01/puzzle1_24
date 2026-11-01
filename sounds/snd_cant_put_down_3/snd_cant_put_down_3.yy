@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"snd_cant_put_down_3",
+  "audioGroupId":{
+    "name":"audiogroup_default",
+    "path":"audiogroups/audiogroup_default",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":0.11340136,
+  "exportDir":"",
+  "name":"snd_cant_put_down_3",
+  "parent":{
+    "name":"Cant put down",
+    "path":"folders/Sounds/Cant put down.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"snd_cant_put_down_3.wav",
+  "volume":0.05,
+}

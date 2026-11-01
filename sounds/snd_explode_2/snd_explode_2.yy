@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_explode_2",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Explode",
+    "path":"folders/Sounds/Explode.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

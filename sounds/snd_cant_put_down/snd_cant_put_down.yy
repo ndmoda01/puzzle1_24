@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_cant_put_down",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Cant put down",
+    "path":"folders/Sounds/Cant put down.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

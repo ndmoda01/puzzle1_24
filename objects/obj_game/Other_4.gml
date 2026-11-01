@@ -58,9 +58,9 @@ switch(room){
 	case rm_2P_level_BO_VS: scr_level_start(_level_timer,_spawn_timer,42,8,4,[1,2,3,4],.7,true);   break;
 	case rm_2P_level_BO_VS_02: scr_level_start(_level_timer,_spawn_timer,36,10,4,[32,33,31,5],.7,true);   break;
 	case rm_2P_level_BO_VS_03: scr_level_start(_level_timer,_spawn_timer,32,12,4,[1,32,4,35],.7,true);   break;
-	case rm_2P_level_CC_1: scr_level_start(_level_timer,_spawn_timer,32,3,3,[1,2,3,4],.7,false);    break;
-	case rm_2P_level_CC_2: scr_level_start(_level_timer,_spawn_timer,24,3,3,[32,31,33,35],.7,false);    break;
-	case rm_2P_level_CC_3: scr_level_start(_level_timer,_spawn_timer,16,3,3,[1,5,33,35],.7,false);    break;
+	case rm_2P_level_CC_1: scr_level_start(_level_timer,_spawn_timer,32,3,4,[1,2,3,4],.7,false);    break;
+	case rm_2P_level_CC_2: scr_level_start(_level_timer,_spawn_timer,24,3,4,[32,5,33,35],.7,false);    break;
+	case rm_2P_level_CC_3: scr_level_start(_level_timer,_spawn_timer,18,3,4,[1,5,33,35],.6,false);    break;
 	
 	#endregion
 	

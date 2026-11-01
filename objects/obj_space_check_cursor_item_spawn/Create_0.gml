@@ -47,7 +47,8 @@ if (_free_space_index == 0){
 	if (obj_game.sbvs == true) and (obj_game.multiplayer_mode == MULTI_COMP){
 		//obj_game.game_over = true;
 		obj_player1.knocked_out = true;
-		audio_play_sound(snd_player_knockout,4,false);
+		var _snd = choose(snd_player_knockout, snd_player_knockout_2, snd_player_knockout_3,snd_player_knockout_4);
+		audio_play_sound(_snd,4,false);
 		
 		//destroy items on your side
 		if (instance_exists(obj_fruit_parent)){

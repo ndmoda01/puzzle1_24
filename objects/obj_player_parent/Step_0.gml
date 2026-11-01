@@ -91,7 +91,8 @@ if ((key_select) and holding == false){
 	
 	if (place_meeting(x,y,obj_fruit_parent)){
 		holding = true;
-		audio_play_sound(snd_pick_up,5,false);
+		var _snd = choose(snd_pick_up, snd_pick_up_2, snd_pick_up_3,snd_pick_up_4);
+		audio_play_sound(_snd,5,false);
 		instance_holding_id = instance_place(x,y,obj_fruit_parent);
 	
 		//grab sprite of what you're holding			
@@ -119,7 +120,8 @@ if ((key_select) and holding == true){
 	//can't put down item sound
 	//need to check before a held item is dropped or it will trigger frequently
 	if(place_meeting(x,y,obj_target)){
-			audio_play_sound(snd_cant_put_down,4,false);
+			var _snd = choose(snd_cant_put_down, snd_cant_put_down_2, snd_cant_put_down_3,snd_cant_put_down_4,snd_cant_put_down_5);
+			audio_play_sound(_snd,4,false);
 	}
 	
 	//swap if over top another item and press the button
@@ -129,7 +131,8 @@ if ((key_select) and holding == true){
 		//pick up the new object that you will swap with
 		if (place_meeting(x,y,obj_fruit_parent)){
 
-			audio_play_sound(snd_pick_up,5,false);
+			var _snd = choose(snd_pick_up, snd_pick_up_2, snd_pick_up_3,snd_pick_up_4);
+			audio_play_sound(_snd,5,false);
 			//save the instance you're picking up to a temp var
 			instance_holding_id_temp = instance_place(x,y,obj_fruit_parent);
 			
@@ -139,8 +142,9 @@ if ((key_select) and holding == true){
 			
 			holding = false;
 		}
-			
-		audio_play_sound(snd_put_down,5,false);
+		
+		var _snd = choose(snd_put_down, snd_put_down_2, snd_put_down_3,snd_put_down_4);
+		audio_play_sound(_snd,5,false);
 		
 		//reactivate item and update position
 		//instance_activate_object(instance_holding_id);
@@ -582,8 +586,9 @@ if ((key_select) and holding == true){
 			//destroy it and reset
 			instance_destroy(instance_holding_id);
 			obj_game.remaining_items--;
-			audio_play_sound(snd_explode_2,1,false);
-			audio_play_sound(snd_collect_line,5,false);
+			//audio_play_sound(snd_explode_2,1,false);
+			var _snd_2 = choose(snd_collect_line, snd_collect_line_2, snd_collect_line_3,snd_collect_line_4);
+			audio_play_sound(_snd_2,5,false);
 			instance_holding_id = noone;
 			
 		}

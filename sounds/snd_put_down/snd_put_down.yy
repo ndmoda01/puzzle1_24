@@ -14,8 +14,8 @@
   "exportDir":"",
   "name":"snd_put_down",
   "parent":{
-    "name":"Sounds",
-    "path":"folders/Sounds.yy",
+    "name":"Put Down",
+    "path":"folders/Sounds/Put Down.yy",
   },
   "preload":false,
   "resourceType":"GMSound",

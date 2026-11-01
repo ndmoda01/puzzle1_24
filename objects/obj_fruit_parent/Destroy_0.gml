@@ -65,28 +65,28 @@ else{
 			case 0: //horizontal
 				var _dir = instance_create_layer(x,y,"Walls",obj_score_direction_card); 
 				_dir.image_index = 0;
-				//var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
-				//    _slice.sprite_index = spr_apple2_p1_split_h_2;
+				var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
+				    _slice.sprite_index = cut_sprite_horizontal;
 			break;	
 			case 1: //vertical
 				var _dir = instance_create_layer(x,y,"Walls",obj_score_direction_card); 
 				_dir.image_index = 1;
-				//var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
-				//_slice.sprite_index = spr_apple2_p1_split_v_2;
+				var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
+				_slice.sprite_index = cut_sprite_vertical;
 	
 			break;	
 			case 2: //forward slash
 				var _dir = instance_create_layer(x,y,"Walls",obj_score_direction_card); 
 				_dir.image_index = 2;
-				//var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
-				//_slice.sprite_index = spr_apple2_p1_split_fs_2;
+				var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
+				_slice.sprite_index = cut_sprite_forward_slash;
 				
 			break;	
 			case 3: //back slash
 				var _dir = instance_create_layer(x,y,"Walls",obj_score_direction_card); 
 				_dir.image_index = 3;
-				//var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
-				//_slice.sprite_index = spr_apple2_p1_split_bs_2;
+				var _slice = instance_create_layer(x,y,"Instances_1",obj_sliced_item);
+				_slice.sprite_index = cut_sprite_back_slash;
 	
 			break;	
 		}
