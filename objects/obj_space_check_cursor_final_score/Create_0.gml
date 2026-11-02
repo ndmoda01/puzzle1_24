@@ -1,5 +1,7 @@
 //empty_space_bonus = 10;
 empty_space_bonus = 5;
+//make the empty space bonus worth 10 on coop mode so it can be divided by 2 (5 points per player per space)
+if (obj_game.multiplayer_mode == MULTI_COOP) empty_space_bonus = 10;
 
 start_x = obj_space_check_start.x;
 start_y = obj_space_check_start.y;
