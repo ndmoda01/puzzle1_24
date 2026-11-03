@@ -9,14 +9,14 @@ var _spawn_timer = 120*SEC;
 switch(room){
 	
 	#region //1 player
-	case rm_1P_level_01: scr_level_start(_level_timer,_spawn_timer,60,4,3,[1,2,3],.6,false);    break;
-	case rm_1P_level_02: scr_level_start(_level_timer,_spawn_timer,54,5,3,[2,3,4],.6,false);    break;
-	case rm_1P_level_03: scr_level_start(_level_timer,_spawn_timer,50,6,3,[3,4,31],.45,false);   break;
-	case rm_1P_level_04: scr_level_start(_level_timer,_spawn_timer,44,8,4,[1,2,33,4],.5,false);  break;
+	case rm_1P_level_01: scr_level_start(_level_timer,_spawn_timer,58,4,3,[1,2,3],.6,false);    break;
+	case rm_1P_level_02: scr_level_start(_level_timer,_spawn_timer,52,5,3,[2,3,4],.6,false);    break;
+	case rm_1P_level_03: scr_level_start(_level_timer,_spawn_timer,46,6,3,[35,4,31],.45,false);   break;
+	case rm_1P_level_04: scr_level_start(_level_timer,_spawn_timer,42,8,4,[1,2,33,4],.5,false);  break;
 	case rm_1P_level_05: scr_level_start(_level_timer,_spawn_timer,38,8,4,[31,33,4,5],.45,false); break;
 	case rm_1P_level_06: scr_level_start(_level_timer,_spawn_timer,40,9,4,[35,3,4,5],.4,false);  break;
 	case rm_1P_level_07: scr_level_start(_level_timer,_spawn_timer,38,10,4,[1,2,33,31],.4,false); break;
-	case rm_1P_level_08: scr_level_start(_level_timer,_spawn_timer,34,10,3,[1,35,3],.45,false);  break;
+	case rm_1P_level_08: scr_level_start(_level_timer,_spawn_timer,34,10,4,[1,35,3,4],.45,false);  break;
 	case rm_1P_level_09: scr_level_start(_level_timer,_spawn_timer,36,11,4,[2,3,33,5],.4,false); break;
 	case rm_1P_level_10: scr_level_start(_level_timer,_spawn_timer,32,12,4,[1,2,3,4],.4,false); break;
 	case rm_1P_level_EN: scr_endurance_room_start();								  break;
@@ -26,9 +26,9 @@ switch(room){
 	
 	#region //2 player
 	case rm_2P_level_01: scr_level_start(_level_timer,_spawn_timer,30,3,3,[1,2,3],.6,false);    break;
-	case rm_2P_level_02: scr_level_start(_level_timer,_spawn_timer,27,5,3,[2,3,4],.55,false);   break;
-	case rm_2P_level_03: scr_level_start(_level_timer,_spawn_timer,25,6,3,[35,4,5],.55,false);   break;
-	case rm_2P_level_04: scr_level_start(_level_timer,_spawn_timer,22,8,4,[1,2,3,4],.55,false); break;
+	case rm_2P_level_02: scr_level_start(_level_timer,_spawn_timer,26,5,3,[2,3,4],.55,false);   break;
+	case rm_2P_level_03: scr_level_start(_level_timer,_spawn_timer,24,6,3,[35,4,5],.55,false);   break;
+	case rm_2P_level_04: scr_level_start(_level_timer,_spawn_timer,21,8,4,[1,2,3,4],.55,false); break;
 	case rm_2P_level_05: scr_level_start(_level_timer,_spawn_timer,19,8,4,[1,3,35,5],.55,false); break;
 	case rm_2P_level_06: scr_level_start(_level_timer,_spawn_timer,20,10,4,[2,32,4,5],.55,false);break;
 	case rm_2P_level_07: scr_level_start(_level_timer,_spawn_timer,19,10,4,[1,3,4,35],.55,false);break;
@@ -42,14 +42,14 @@ switch(room){
 	#endregion
 	
 	#region //2 player vs
-	case rm_2P_level_01_VS: scr_level_start(_level_timer,_spawn_timer,60,4,3,[1,2,3],.6,true);   break;
-	case rm_2P_level_02_VS: scr_level_start(_level_timer,_spawn_timer,54,5,3,[2,3,4],.6,true);   break;
-	case rm_2P_level_03_VS: scr_level_start(_level_timer,_spawn_timer,50,6,3,[35,4,5],.45,true);  break;
-	case rm_2P_level_04_VS: scr_level_start(_level_timer,_spawn_timer,44,8,4,[1,2,3,4],.5,true); break;
+	case rm_2P_level_01_VS: scr_level_start(_level_timer,_spawn_timer,58,4,3,[1,2,3],.6,true);   break;
+	case rm_2P_level_02_VS: scr_level_start(_level_timer,_spawn_timer,52,5,3,[2,3,4],.6,true);   break;
+	case rm_2P_level_03_VS: scr_level_start(_level_timer,_spawn_timer,46,6,3,[35,4,5],.45,true);  break;
+	case rm_2P_level_04_VS: scr_level_start(_level_timer,_spawn_timer,42,8,4,[1,2,3,4],.5,true); break;
 	case rm_2P_level_05_VS: scr_level_start(_level_timer,_spawn_timer,38,8,4,[1,3,35,5],.50,true);break;
 	case rm_2P_level_06_VS: scr_level_start(_level_timer,_spawn_timer,40,9,4,[2,32,4,5],.4,true); break;
 	case rm_2P_level_07_VS: scr_level_start(_level_timer,_spawn_timer,38,10,4,[1,3,4,35],.4,true);break;
-	case rm_2P_level_08_VS: scr_level_start(_level_timer,_spawn_timer,34,10,3,[32,2,3],.45,true); break;
+	case rm_2P_level_08_VS: scr_level_start(_level_timer,_spawn_timer,34,10,4,[32,2,3,4],.45,true); break;
 	case rm_2P_level_09_VS: scr_level_start(_level_timer,_spawn_timer,36,11,4,[32,2,3,5],.4,true);break;
 	case rm_2P_level_10_VS: scr_level_start(_level_timer,_spawn_timer,32,12,4,[1,35,3,4],.4,true);break;
 	case rm_2P_level_EN_VS: scr_endurance_room_start();                                break;

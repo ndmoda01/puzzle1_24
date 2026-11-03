@@ -302,7 +302,7 @@ else if (room == rm_credits){
 	draw_text(50, 160,"Sound Effects: Tanukisuitup");
 	draw_text(50, 220,"Art Assets: Tanukisuitup");	
 	draw_text(50, 280,"Music: All music is by Abstraction from the album Three Red Hearts");
-	draw_text(50, 340,"Ver. 1.5, 11-09-2025");	
+	draw_text(50, 340,"Ver. 1.6, 11-05-2026");	
 		
 	if (gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_anykey)){
 		audio_play_sound(snd_menu_low,4,false);
