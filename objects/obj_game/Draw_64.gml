@@ -1392,7 +1392,9 @@ else{
 		draw_set_halign(fa_right);
 		//draw_text(152,10, "(x"+string(player1_score_modifier)+")");
 		
-		scribble("[fa_left][fa_middle][fnt_game_gui_extra_large_3]P1 ").draw(24,52);
+		//draw large player number if not playing coop
+		if (multiplayer_mode != MULTI_COOP)  scribble("[fa_left][fa_middle][fnt_game_gui_extra_large_3]P1 ").draw(24,52);
+		
 		//draw score or current health in blockout
 		if (game_type == BLOCKOUT){
 			var _lives_buffer = 72;
@@ -1425,7 +1427,8 @@ else{
 		else {
 			//score needs to be right justfied 
 			if (multiplayer_mode == MULTI_COOP){
-				
+				scribble("[fa_left][fa_middle][fnt_game_gui_coop_score]P1 ").draw(24,31);
+				scribble("[fa_left][fa_middle][fnt_game_gui_coop_score]Team ").draw(24,63);
 				//scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(coop_score)).draw(390,52);
 				scribble("[fa_right][fa_middle][fnt_game_gui_coop_score]"+string(player1_score)).draw(390,31);
 				scribble("[fa_right][fa_middle][fnt_game_gui_coop_score]"+string(coop_score)).draw(390,63);
@@ -1456,7 +1459,7 @@ else{
 			draw_set_halign(fa_right);
 			//draw_text(view_get_wport(0)-18,10, "(x"+string(player2_score_modifier)+")");
 			
-			scribble("[fa_left][fa_middle][fnt_game_gui_extra_large_3]P2 ").draw(1536,52);
+			if (multiplayer_mode != MULTI_COOP) scribble("[fa_left][fa_middle][fnt_game_gui_extra_large_3]P2 ").draw(1536,52);
 			//blockout - hearts
 			if (game_type == BLOCKOUT){
 				var _lives_buffer = 72;
@@ -1490,6 +1493,8 @@ else{
 			//other modes - score
 			else{ 
 				if (multiplayer_mode == MULTI_COOP){
+					scribble("[fa_left][fa_middle][fnt_game_gui_coop_score]P2 ").draw(1536,31);
+					scribble("[fa_left][fa_middle][fnt_game_gui_coop_score]Team ").draw(1536,63);
 					//scribble("[fa_right][fa_middle][fnt_game_gui_extra_large_3]"+string(coop_score)).draw(1902,52);
 					scribble("[fa_right][fa_middle][fnt_game_gui_coop_score]"+string(player2_score)).draw(1902,31);
 					scribble("[fa_right][fa_middle][fnt_game_gui_coop_score]"+string(coop_score)).draw(1902,63);
@@ -1828,14 +1833,18 @@ else{
 		//issue present where all colored blocks are destroyed when a player knocked out, leading game to go to the next level
 		
 		//pause players
-		if (instance_exists(obj_player_parent))	with(obj_player_parent) has_control = false;
-	
-	
+		if (instance_exists(obj_player_parent)) with(obj_player_parent) has_control = false;
 	
 		//start the pause 
 		if (calculated_level_score == false){
 			//set alarm before moving to the next level for a short pause
 			//alarm[0] = SEC*5;
+			
+			//just arriving (hasn't decremented yet
+			if (level_end_timer == level_end_timer_max){
+				var _snd = choose(snd_level_clear, snd_level_clear_2, snd_level_clear_3,snd_level_clear_4);
+				audio_play_sound(_snd,4,false);	
+			}
 			
 			level_end_timer--;
 			
@@ -1845,6 +1854,7 @@ else{
 		//if the pause is finished, move to the next level
 		//if (alarm[0] <= 0) and (calculated_level_score = true){
 		if (level_end_timer <= 0) and (calculated_level_score == false){
+			
 			level++
 			scr_level_flow();
 			calculated_level_score = true;
