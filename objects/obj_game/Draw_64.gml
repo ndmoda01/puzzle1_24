@@ -99,7 +99,7 @@ else if (room == rm_game_type_menu){
 	}
 	
 	//cancel out of the room, back to the menu
-	if (gamepad_button_check_pressed(0, gp_face2) || keyboard_check_pressed(vk_escape)){
+	if (gamepad_button_check_pressed(0, gp_face2) || gamepad_button_check_pressed(1, gp_face2) || keyboard_check_pressed(vk_escape)){
 		audio_play_sound(snd_menu_low,4,false);
 		//instance_create_depth(x,y,-1000,obj_room_transition);
 		//room_goto(rm_main_menu);
@@ -114,9 +114,12 @@ else if (room == rm_high_scores){
 	
 	#region //displaying current high scores
 	if (high_score_state == "display"){
-		if (!instance_exists(obj_room_transition)) and (gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_anykey)){ 
-			page++;
-			audio_play_sound(snd_menu_low,4,false);
+		
+		if (!instance_exists(obj_room_transition)){
+			if (gamepad_button_check_pressed(0, gp_face1) || gamepad_button_check_pressed(1, gp_face1) || keyboard_check_pressed(vk_anykey)){ 
+				page++;
+				audio_play_sound(snd_menu_low,4,false);
+			}
 		}
 		
 		switch(page){
@@ -288,7 +291,7 @@ else if (room == rm_controls){
 	draw_text(120, 540,"Controls:");	
 	scr_player_controls_display(420,660);
 	
-	if (gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_anykey)){
+	if (gamepad_button_check_pressed(0, gp_face1) || gamepad_button_check_pressed(1, gp_face1) || keyboard_check_pressed(vk_anykey)){
 		audio_play_sound(snd_menu_low,4,false);
 		//instance_create_depth(x,y,-1000,obj_room_transition);
 		//room_goto(rm_main_menu);
@@ -304,7 +307,7 @@ else if (room == rm_credits){
 	draw_text(50, 280,"Music: All music is by Abstraction from the album Three Red Hearts");
 	draw_text(50, 340,"Ver. 1.6, 11-05-2026");	
 		
-	if (gamepad_button_check_pressed(0, gp_face1) || keyboard_check_pressed(vk_anykey)){
+	if (gamepad_button_check_pressed(0, gp_face1) || gamepad_button_check_pressed(1, gp_face1) || keyboard_check_pressed(vk_anykey)){
 		audio_play_sound(snd_menu_low,4,false);
 		//instance_create_depth(x,y,-1000,obj_room_transition);
 		//room_goto(rm_main_menu);

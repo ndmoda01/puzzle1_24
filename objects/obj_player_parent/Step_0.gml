@@ -38,6 +38,13 @@ h_move = (_horizontal * move_amount);
 var _vertical = key_down - key_up;
 v_move = (_vertical * move_amount);
 
+
+
+
+//preventing diagonal movement
+if (h_move != 0) v_move = 0;
+if (v_move != 0) h_move = 0;
+
 //decrease movement timer if buttons are being held
 //if ((key_left_held or key_right_held or key_up_held or key_down_held) >= 20) and ((key_left_held or key_right_held or key_up_held or key_down_held) < 30) movement_timer = 10;
 //if ((key_left_held or key_right_held or key_up_held or key_down_held) >= 30) and ((key_left_held or key_right_held or key_up_held or key_down_held) < 40) movement_timer = 8;

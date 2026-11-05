@@ -1,9 +1,9 @@
 /// @description Insert description here
 
-key_up = gamepad_button_check_pressed(0, gp_padu)  || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
-key_down = gamepad_button_check_pressed(0, gp_padd)  || keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
+key_up = gamepad_button_check_pressed(0, gp_padu)  || gamepad_button_check_pressed(1, gp_padu)  || keyboard_check_pressed(vk_up) || keyboard_check_pressed(ord("W"));
+key_down = gamepad_button_check_pressed(0, gp_padd)  || gamepad_button_check_pressed(1, gp_padd)  || keyboard_check_pressed(vk_down) || keyboard_check_pressed(ord("S"));
 	
-key_select = gamepad_button_check_pressed(0, gp_face1)  || keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("E"));
+key_select = gamepad_button_check_pressed(0, gp_face1)  || gamepad_button_check_pressed(1, gp_face1)  || keyboard_check_pressed(vk_space) || keyboard_check_pressed(vk_enter) || keyboard_check_pressed(ord("E"));
 
 
 if (place_meeting(x,y,obj_button) and (instance_exists(inst_DESCRIPTION))){
