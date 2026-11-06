@@ -28,7 +28,11 @@ function scr_level_start(
 	//how full the level is at the start of the level. Percent (ex .5)
 	level_item_percent_full = _level_item_percent_full;
 	//spawn starting items for 1 player and 2 player coop
-	if (game_type == CLEANUP) instance_create_layer(0,0,"Instances_1",obj_space_check_cursor_starting_item_spawn_blocks_color);
+	if (game_type == CLEANUP){ 
+		//limit selection to only basic fruit for this mode to work
+		
+		instance_create_layer(0,0,"Instances_1",obj_space_check_cursor_starting_item_spawn_blocks_color);	
+	}
 	else instance_create_layer(0,0,"Instances_1",obj_space_check_cursor_starting_item_spawn);
 	//spawn items for player 2 in vs modes
 	if (_vs) {

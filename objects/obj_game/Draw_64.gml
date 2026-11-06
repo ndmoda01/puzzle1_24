@@ -365,7 +365,7 @@ else if (room == rm_ending){
 		}
 		
 		//calculate the highest score for game types that use that as the winning condition
-		if (game_type == CLASSIC) or (game_type == ENDURANCE) or (game_type == MARATHON){
+		if (game_type == CLASSIC) or (game_type == ENDURANCE) or (game_type == MARATHON) or (game_type == CLEANUP){
 			switch(number_of_players){
 			
 				case 2:
